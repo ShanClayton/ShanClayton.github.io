@@ -111,21 +111,3 @@ h1 {
   padding: 2%;
   box-shadow: inset 3px 2px 2px #4C4C4C;
 }
-
-#clear-board {
-  margin: 4% auto;
-  display: block;
-  font-family: 'Notable', sans-serif;
-  font-size: 0.75em;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 1em 3em;
-  background-color: #ED3D88;
-  border: none;
-  color: white;
-}
-
-#clear-board:hover {
-  background-color: darkgrey;
-  color: white;
-}
