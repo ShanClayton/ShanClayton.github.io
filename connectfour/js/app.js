@@ -45,7 +45,6 @@ $(() => {
     for (let i = 0; i < 42; i++) { // I want to create 42 white circles that when clicked will change to teal/blue
       const $newBoardDiv = $('<div>'); // creating a new div that goes below the div board
         $newBoardDiv.addClass('circle'); // adding the class circle to the new board div
-        $newBoardDiv.addClass('shadow'); // adding the class shadow to the new board div
         $newBoardDiv.attr('id', i); // adding ids with numbers to the circles
         $board.append($newBoardDiv); // appending the $newBoardDiv that goes inside the board div
       };
