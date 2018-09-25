@@ -1,30 +1,36 @@
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
   <head>
     <meta charset="utf-8">
-    <!--- jQuery comes first --->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <!--- App.js comes after --->
-    <script type="text/javascript" src="app.js"></script>
+    <!-- jQuery script comes BEFORE app.js -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Let's Play Connect Four</title>
+    <!-- app.js comes AFTER jQuery script -->
+      <script type="text/javascript" src="js/app.js" type="js"></script>
+
+      <link rel="stylesheet" href="css/main.css" type="css">
+
+    <title>Connect Four</title>
   </head>
   <body>
-  <h1>Connect Four </h1>
-  <p class="start">Player One</p>
 
-  <div class="container">
-        <button id="circle-button" id="button1"></button>
-        <button id="circle-button" id="button2"></button>
-        <button id="circle-button" id="button3"></button>
-        <button id="circle-button" id="button4"></button>
-        <button id="circle-button" id="button5"></button>
-        <button id="circle-button" id="button6"></button>
-        <button id="circle-button" id="button7"></button>
-  </div>
-  <div id="gameboard"></div>
+    <h1>Connect Four</h1>
+    <p class="start">Player One</p>
 
-  <button id="restart">Start New Game</button>
+    <div class="container">
+        <button class="play" id="button1">X</button>
+        <button class="play" id="button2">X</button>
+        <button class="play" id="button3">X</button>
+        <button class="play" id="button4">X</button>
+        <button class="play" id="button5">X</button>
+        <button class="play" id="button6">X</button>
+        <button class="play" id="button7">X</button>
+    </div>
+
+    <div id="gameboard"></div>
+
+    <button id="restart">New Game</button>
+
   </body>
 </html>
