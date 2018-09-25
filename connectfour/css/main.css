@@ -1,0 +1,131 @@
+@import "https://fonts.googleapis.com/css?family=Notable|Noto+Serif+JP";
+body {
+  background-size: 100%;
+  background: url(images/colorful.jpg) no-repeat center;
+}
+
+h1, p {
+  text-align: center;
+}
+
+h1 {
+  font-size: 4em;
+  font-family: 'Notable', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 900;
+}
+
+.start {
+  font-size: 2em;
+  font-family: 'Noto Serif JP', sans-serif;
+  padding-top: 0.3em;
+  color: #1cbbba;
+}
+
+.pink-wins {
+  background-color: #FC89AC;
+  color: white;
+  width: 6em;
+	padding: 0.3em;
+  margin: 3% auto;
+  transition: transform .5s;
+  transform:  scale(2);
+}
+
+.light-blue-wins {
+  background-color: #43C6DB;
+  color: white;
+  width: 6em;
+	padding: 0.3em;
+  margin: 3% auto;
+  transition: transform .5s;
+  transform:  scale(2);
+}
+
+.container {
+  width: 46em;
+  margin: auto;
+  display: block;
+
+}
+
+.circle-button {
+  display: inline-block;
+  font-family: 'Notable', sans-serif;
+  font-size: 0.6em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin: 1.5%;
+  padding: 0 1.3em;
+  border: none;
+  background-color: transparent;
+  color: #ED3D88;
+}
+
+.circle-button:hover {
+  color: darkgrey;
+}
+
+#gameboard {
+  width: 45em;
+  height: 40em;
+  margin: 1% auto;
+  display: block;
+  border: 1em solid #4CC417;
+  border-radius: 5%;
+  background-color: white;
+
+}
+
+.circle {
+  width: 3.7em;
+	height: 3.7em;
+  display: inline-block;
+	background: #F0F0F0;
+  border-radius: 50%;
+  margin: 1%;
+  padding: 2%;
+
+}
+
+
+.pink-chip {
+  width: 3.7em;
+	height: 3.7em;
+	background: #FC89AC;
+  border-radius: 50%;
+  margin: 1%;
+  padding: 2%;
+  box-shadow: inset 3px 1px 1px #636363;
+}
+
+.light-blue-chip {
+  width: 3.7em;
+	height: 3.7em;
+	background: #0054A6;
+  border-radius: 50%;
+  margin: 1%;
+  padding: 2%;
+  box-shadow: inset 3px 2px 2px #4C4C4C;
+}
+
+#clear-board {
+  margin: 4% auto;
+  display: block;
+  font-family: 'Notable', sans-serif;
+  font-size: 0.75em;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1em 3em;
+  background-color: #ED3D88;
+  border: none;
+  color: white;
+}
+
+#clear-board:hover {
+  background-color: darkgrey;
+  color: white;
+}
