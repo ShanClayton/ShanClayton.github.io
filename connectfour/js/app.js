@@ -18,11 +18,11 @@ const $circleClass = $('.circle'); // grabbing circle class
 
    if (toggle) {
      $(column).addClass('pink-chip'); // if toggle is true, it will add the class of teal chip to the $gameDiv
-     $nextTurn.text('Player 1'); // when teal-token is added to the div, the p tag will change color
+     $nextTurn.text('Player 1'); // when teal chip is added to the div, the p tag will change color
      $nextTurn.css('color', '#43C6DB'); // color of p tag changes from pink to teal
    } else {
      $(column).addClass('teal-chip'); // if toggle is false, it will add the class of pink
-     $nextTurn.text('Player 2 '); // when teal-token is added to the div, the p tag will change to pinks (player 2 ) turn
+     $nextTurn.text('Player 2 '); // when teal token is added to the div, the p tag will change to pink (player 2 ) and it's 2nd player turn
      $nextTurn.css('color', '#FC89AC'); // changing color of the p tag to pink
    };
 
