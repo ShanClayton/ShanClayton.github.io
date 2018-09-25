@@ -17,18 +17,20 @@ const $circleClass = $('.circle'); // grabbing circle class
    console.log('testing toggleFunction'); // click listener is working
 
    if (toggle) {
-     $(column).addClass('pink-token'); // if toggle is true, it will add the class of teal-token to the $newBoardDiv created below
+     $(column).addClass('pink-chip'); // if toggle is true, it will add the class of teal chip to the $gameDiv
      $nextTurn.text('Player 1'); // when teal-token is added to the div, the p tag will change color
      $nextTurn.css('color', '#43C6DB'); // color of p tag changes from pink to teal
    } else {
-     $(column).addClass('teal-token'); // if toggle is false, it will add the clas of pink
+     $(column).addClass('teal-chip'); // if toggle is false, it will add the class of pink
      $nextTurn.text('Player 2 '); // when teal-token is added to the div, the p tag will change to pinks (player 2 ) turn
      $nextTurn.css('color', '#FC89AC'); // changing color of the p tag to pink
    };
 
      toggle = !toggle; // alternates the turns between teal and  pink
 
-     checkingWins(); // calls the checkingWins function to see who has won
+     // checkWinner(); // calls the checkwins function to see who has won
+
+   }; // --> closing function
 
 //  creating gameboard. Step 1
   const createGameBoard = function(){
@@ -39,7 +41,7 @@ const $circleClass = $('.circle'); // grabbing circle class
     $gameboard.append($gameDiv);// appending the $gameDiv that goes inside the board div
   };
 
-};
+}; // closing  function
 createGameBoard(); // calling createGameBoard to create the board when page loads
 
 
