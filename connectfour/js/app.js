@@ -40,7 +40,7 @@ $(() => {
 
 
 
-// 1. CREATING CONNECT FOUR BOARD [X]
+//  Creating gameboard (1)
   const createBoard = function() {
     for (let i = 0; i < 42; i++) { // create 42 white circles that when clicked will change to blue to pink
       const $newBoardDiv = $('<div>'); // creating a new div that goes below the div board
@@ -65,7 +65,7 @@ $(() => {
   const column7 = [$('#41'), $('#34'), $('#27'), $('#20'), $('#13'), $('#6')];
 
 
-// grabbing the 'play here' buttons from the html
+// grabbing the 'play' buttons from html
   const $button1Id = $('#button1');
   const $button2Id = $('#button2');
   const $button3Id = $('#button3');
@@ -75,7 +75,7 @@ $(() => {
   const $button7Id = $('#button7');
 
 
-// creating a function to make the 'play here' buttons clickable
+// creating a function to make the top x buttons clickable
   const clickButtons = function () {
 
     $button1Id.on('click', function(){ // when I click on this button, the for loop will run
@@ -174,12 +174,11 @@ $(() => {
 
 
 /*Psuedo code
-create a board using html and css (divs possibly)
-create rows of 6 down and 7 across total of 42 circles
-circle should fill with color when player clicks desired spot
-fill with purple when player 2 clicks desired spot
-each player should have different color (player 1 - pink player 2 - purple )
+create a board using html and css (divs)  - done
+create rows of 6 down and 7 across total of 42 circles - done
+circle should fill with color when players click desired spot - done
+each player should have different color (player 1 - pink player 2 - blue ) - done
 check for winner when player makes a row of same color
 pop up a winner message when winner is found
-add buttons that will drop color into chosen slots
+add buttons that will drop color into chosen slots - done
 add reset game button*/
