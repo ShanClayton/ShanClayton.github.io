@@ -16,12 +16,12 @@ $(() => {
   const $circleClass = $('.circle'); // grabbing the circle class
 
 
-// 3. SWITCH TURNS [X]
+// Switching Turns (3)
   const toggleFunction = function(column) {
     console.log('testing toggleFunction'); // click listener is working
 
     if (toggle) {
-      $(column).addClass('light-blue-chip'); // if toggle is true, it will add the class of teal-token to the $newBoardDiv created below
+      $(column).addClass('light-blue-chip'); // if toggle is true, it will add the class of light-blue chip to the $newBoardDiv created below
 
       $nextTurn.text("Player Two"); // when light-blue chip is added to the div, the p tag will change to player 2 (pink) turn
       $nextTurn.css('color', '#FC89AC'); // changing the color of the p tag to pink
@@ -32,7 +32,7 @@ $(() => {
       $nextTurn.css('color', '#43C6DB'); // changing the color of the p tag to light blue
     };
 
-      toggle = !toggle; // alternates the turns between teal and blue
+      toggle = !toggle; // alternates the turns between light blue and pink
 
       // checkingWins(); // calls the checkingWins function to see who has won
 
@@ -42,7 +42,7 @@ $(() => {
 
 // 1. CREATING CONNECT FOUR BOARD [X]
   const createBoard = function() {
-    for (let i = 0; i < 42; i++) { // I want to create 42 white circles that when clicked will change to teal/blue
+    for (let i = 0; i < 42; i++) { // create 42 white circles that when clicked will change to blue to pink
       const $newBoardDiv = $('<div>'); // creating a new div that goes below the div board
         $newBoardDiv.addClass('circle'); // adding the class circle to the new board div
         $newBoardDiv.attr('id', i); // adding ids with numbers to the circles
@@ -54,7 +54,7 @@ $(() => {
 
 
 
-// 2. MAKING THE PLAY HERE BUTTONS CLICKABLE [X]
+// Clickable top buttons (2)
 // creating arrays for the columns
   const column1 = [$('#35'), $('#28'), $('#21'), $('#14'), $('#7'), $('#0')];
   const column2 = [$('#36'), $('#29'), $('#22'), $('#15'), $('#8'), $('#1')];
@@ -157,6 +157,7 @@ $(() => {
 
   clickButtons(); // calling the clickButtons function so the user can click the x  buttons on top of the page
 
+//CHECK WINS
 
 });//---> DO NOT TOUCH!
 
