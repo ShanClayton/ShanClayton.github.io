@@ -10,6 +10,7 @@ h1, p {
 
 h1 {
   font-size: 4em;
+	color:
   font-family: 'Notable', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -21,9 +22,10 @@ h1 {
   font-family: 'Noto Serif JP', sans-serif;
   padding-top: 0.3em;
   color: #1cbbba;
+	justify-content: center;
 }
 
-.pink-wins {
+/* .pink-wins {
   background-color: #FC89AC;
   color: white;
   width: 6em;
@@ -41,33 +43,44 @@ h1 {
   margin: 3% auto;
   transition: transform .5s;
   transform:  scale(2);
-}
+} */
 
 .container {
-  width: 46em;
+  width: 730px;
   margin: auto;
   display: block;
 
+}
+.play {
+  display: inline-block;
+  font-family: 'Arial', serif;
+  font-size: 0.6em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.08em;
+  margin: 5%
+  padding: 0 3em;
+  border: none;
+  background-color: transparent;
+  color: #cd4985;
 }
 
 .circle-button {
   display: inline-block;
   font-family: 'Notable', sans-serif;
   font-size: 0.6em;
-  font-weight: 700;
+  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 0.04em;
-  margin: 1.5%;
+  margin: 0 auto;
   padding: 0 1.3em;
   border: none;
   background-color: transparent;
-  color: #ED3D88;
+  color: #cd4985;
 }
 
-.circle-button:hover {
-  color: darkgrey;
-}
+
 
 #gameboard {
   width: 45em;
@@ -110,4 +123,16 @@ h1 {
   margin: 1%;
   padding: 2%;
 
+}
+#restart {
+  margin: 4% auto;
+  display: block;
+  font-family: 'Noto Serif JP', sans-serif;
+  font-size: 0.75em;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1em 3em;
+  background-color: #4CC417;
+  border: none;
+  color: white;
 }
