@@ -2,74 +2,29 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Let's Play Connect Four!</title>
-     <link rel="stylesheet" type="text/css" href="main.css">
+    <!--- jQuery comes first --->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!--- App.js comes after --->
+    <script type="text/javascript" src="app.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Let's Play Connect Four</title>
   </head>
   <body>
-    <!--- HEADER --->
-   <header>
-     <h1>Connect Four</h1>
-   </header>
-  <!--- GAMEBOARD --->
-  <div id="gameboard">
-      <div id="column-A">
-          <div id="ca1" class="white"></div>
-          <div id="ca2" class="white"></div>
-          <div id="ca3" class="white"></div>
-          <div id="ca4" class="white"></div>
-          <div id="ca5" class="white"></div>
-          <div id="ca6" class="white"></div>
-      </div>
-      <div id="column-B">
-          <div id="cb1" class="white"></div>
-          <div id="cb2" class="white"></div>
-          <div id="cb3" class="white"></div>
-          <div id="cb4" class="white"></div>
-          <div id="cb5" class="white"></div>
-          <div id="cb6" class="white"></div>
-      </div>
-      <div id="column-C">
-          <div id="cb1" class="white"></div>
-          <div id="cb2" class="white"></div>
-          <div id="cb3" class="white"></div>
-          <div id="cb4" class="white"></div>
-          <div id="cb5" class="white"></div>
-          <div id="cb6" class="white"></div>
-      </div>
-      <div id="column-D">
-          <div id="cc1" class="white"></div>
-          <div id="cc2" class="white"></div>
-          <div id="cc3" class="white"></div>
-          <div id="cc4" class="white"></div>
-          <div id="cc5" class="white"></div>
-          <div id="cc6" class="white"></div>
-      </div>
-      <div id="column-E">
-          <div id="cd1" class="white"></div>
-          <div id="cd2" class="white"></div>
-          <div id="cd3" class="white"></div>
-          <div id="cd4" class="white"></div>
-          <div id="cd5" class="white"></div>
-          <div id="cd6" class="white"></div>
-      </div>
-      <div id="column-F">
-          <div id="ce1" class="white"></div>
-          <div id="ce2" class="white"></div>
-          <div id="ce3" class="white"></div>
-          <div id="ce4" class="white"></div>
-          <div id="ce5" class="white"></div>
-          <div id="ce6" class="white"></div>
-      </div>
-      <div id="column-G">
-          <div id="cf1" class="white"></div>
-          <div id="cf2" class="white"></div>
-          <div id="cf3" class="white"></div>
-          <div id="cf4" class="white"></div>
-          <div id="cf5" class="white"></div>
-          <div id="cf6" class="white"></div>
-      </div>
+  <h1>Connect Four </h1>
+  <p class="start">Player 1 it's your turn</p>
+
+  <div class="container">
+        <button id="circle-button" id="button1"></button>
+        <button id="circle-button" id="button2"></button>
+        <button id="circle-button" id="button3"></button>
+        <button id="circle-button" id="button4"></button>
+        <button id="circle-button" id="button5"></button>
+        <button id="circle-button" id="button6"></button>
+        <button id="circle-button" id="button7"></button>
   </div>
-    <!--- RESET GAME --->
-   <button id="reset">Reset Game</button>
+  <div id="gameboard"></div>
+
+  <button id="restart">Start New Game</button>
   </body>
 </html>
