@@ -34,7 +34,7 @@ $(() => {
 
       toggle = !toggle; // alternates the turns between light blue and pink
 
-      // checkingWins(); // calls the checkingWins function to see who has won
+      checkWinners(); // calls the checkingWins function to see who has won
 
   };// --> closing toggleFunction function
 
@@ -75,14 +75,14 @@ $(() => {
   const $button7Id = $('#button7');
 
 
-// creating a function to make the top x buttons clickable
-  const clickButtons = function () {
+// create a function to make the top x buttons clickable
+  const clickBtns = function () {
 
     $button1Id.on('click', function(){ // when I click on this button, the for loop will run
       for (let i = 0; i < column1.length; i++) {
-        if ($(column1[i]).hasClass('light-blue-chip') || column1[i].hasClass('pink-chip')) { // if it has a teal or blue token, do nothing
-        } else { // else, run the toggleFunction which will switch from teal/blue token
-          toggleFunction(column1[i]); // this makes the token start teal because toggle is set to true
+        if ($(column1[i]).hasClass('light-blue-chip') || column1[i].hasClass('pink-chip')) { // if it has a light blue or pink button do nothing
+        } else { // else, run the toggleFunction which will switch from light-blue to pink token
+          toggleFunction(column1[i]); // this makes the token start with player one (light-blue) because toggle is set to true
           break; // this will stop the column to be filled out completely
         }
       }
@@ -101,7 +101,7 @@ $(() => {
     $button3Id.on('click', function(){
       for (let i = 0; i < column3.length; i++) {
         if (column3[i].hasClass('light-blue-chip') || column3[i].hasClass('pink-chip')) {
-          console.log('space taken');
+
         } else {
           toggleFunction(column3[i]);
           break;
@@ -123,7 +123,7 @@ $(() => {
     $button5Id.on('click', function(){
       for (let i = 0; i < column5.length; i++) {
         if (column5[i].hasClass('light-blue-chip') || column5[i].hasClass('blue-pink')) {
-          console.log('space taken');
+
         } else {
           toggleFunction(column5[i]);
           break;
@@ -134,7 +134,7 @@ $(() => {
     $button6Id.on('click', function(){
       for (let i = 0; i < column6.length; i++) {
         if (column6[i].hasClass('light-blue-chip') || column6[i].hasClass('pink-chip')) {
-          console.log('space taken');
+
         } else {
           toggleFunction(column6[i]);
           break;
@@ -145,7 +145,7 @@ $(() => {
     $button7Id.on('click', function(){
       for (let i = 0; i < column7.length; i++) {
         if (column7[i].hasClass('light-blue-chip') || column7[i].hasClass('pink-chip')) {
-          console.log('space taken');
+
         } else {
           toggleFunction(column7[i]);
           break;
@@ -155,9 +155,12 @@ $(() => {
 
   }; // --> clickButtons function ends
 
-  clickButtons(); // calling the clickButtons function so the user can click the x  buttons on top of the page
+  clickBtns(); // calling the clickButtons function so the user can click the x  buttons on top of the page
 
 //CHECK WINS
+
+
+
 
 });//---> DO NOT TOUCH!
 
