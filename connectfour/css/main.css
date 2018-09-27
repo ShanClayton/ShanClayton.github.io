@@ -24,14 +24,16 @@ h1 {
 .start {
   font-size: 2em;
   font-family: 'Noto Serif JP', sans-serif;
+  font-weight: 400;
   padding-top: 0.3em;
   color: #1cbbba;
 	justify-content: center;
 }
 
 .pink-wins {
-  background-color: #FC89AC;
-  color: white;
+  /* background-color: #FC89AC; */
+  color: yellow;
+  font-weight: bold;
   width: 6em;
 	padding: 0.3em;
   margin: 3% auto;
@@ -41,7 +43,8 @@ h1 {
 
 .light-blue-wins {
   background-color: #43C6DB;
-  color: white;
+  color: yellow;
+  font-weight:
   width: 6em;
 	padding: 0.3em;
   margin: 3% auto;
@@ -56,6 +59,8 @@ h1 {
 
 }
 .drop {
+  background: linear-gradient(270deg, #FF357F, #1ad3de);
+  background-size: 400% 400%;
   display: inline-block;
   font-family: 'Arial', serif;
   font-size: 0.6em;
@@ -66,9 +71,6 @@ h1 {
   margin: 0;
   padding: 0 3em;
   border: none;
-  background-color: transparent;
-  background: linear-gradient(270deg, #fc89ac, #1ad3de);
-  background-size: 400% 400%;
 
   -webkit-animation: pinkandgreen 29s ease infinite;
   -moz-animation: pinkandgreen 29s ease infinite;
