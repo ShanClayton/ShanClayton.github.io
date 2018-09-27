@@ -1,10 +1,13 @@
 @import "https://fonts.googleapis.com/css?family=Notable|Noto+Serif+JP";
 body {
+/* background-image: url(../images/greylines.png) no-repeat; */
+background-color: black;
 background-size: 100%;
 }
 
 h1, p {
   text-align: center;
+
 
 }
 
@@ -12,6 +15,7 @@ h1 {
   font-size: 3em;
   font-family: 'Notable', sans-serif;
   font-weight: bold;
+  color: #43C6DB;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 900;
@@ -55,7 +59,7 @@ h1 {
   display: inline-block;
   font-family: 'Arial', serif;
   font-size: 0.6em;
-  font-weight: 700;
+  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.08em;
@@ -109,7 +113,7 @@ h1 {
   display: block;
   border: 1em solid #4CC417;
   border-radius: 5%;
-  background-color: white;
+  background-color: yellow;
 
 }
 
@@ -117,7 +121,7 @@ h1 {
   width: 3.7em;
 	height: 3.7em;
   display: inline-block;
-	background: #f0edf3;
+	background: #ede8e2;
   border-radius: 50%;
   margin: 1%;
   padding: 2%;
