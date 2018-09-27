@@ -23,12 +23,12 @@ $(() => {
       $(column).addClass('light-blue-chip'); // if toggle is true, it will add the class of light-blue chip to the $gameBoardDiv created below
 
       $nextTurn.text("Player Two"); // when light-blue chip is added to the div, the p tag will change to player 2 (pink) turn
-      $nextTurn.css('color', '#FC89AC'); // changing the color of the p tag to pink
+      $nextTurn.css('color', '#4CC417'); // changing the color of the p tag to pink
     } else {
       $(column).addClass('pink-chip'); // if toggle is false, it will add the class of the pink-chip to the $gameBoardDiv
 
       $nextTurn.text("Player One"); // when pink-chip is added to the div, the p tag will change to player 1 (light blue) turn
-      $nextTurn.css('color', '#43C6DB'); // changing the color of the p tag to light blue
+      $nextTurn.css('color', '#F3F315'); // changing the color of the p tag to light blue
     };
 
       toggle = !toggle; // alternates the turns between light blue and pink
@@ -342,9 +342,9 @@ $(() => {
 
 //Reset button
   $restartGame.on('click', function() {
-  $board.empty(); // this will reset the board after I click the clearButton and will stop it from creating 42 circles again
+  $board.empty(); // this will reset the board when restart button is clicked
   createBoard(); // this will run the createBoard again
-  $nextTurn.remove('p'); // removing the p tag after the new game button is clicked.
+  $nextTurn.remove('p'); // will remove player names
 }); // --> end of function
 
 
