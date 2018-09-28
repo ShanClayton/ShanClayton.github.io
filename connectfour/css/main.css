@@ -1,9 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Dosis:200,400|Noto+Sans+K";
 body {
-/* background-image: url(../images/greylines.png) no-repeat; */
 background-color: black;
-/* background-size: 100%; */
-/* padding-top: 200px; */
 }
 
 h1, p {
@@ -24,27 +21,14 @@ h1.neon-header {
   0px 0px 40px #9D00FF,
   0px 0px 50px #9D00FF,
   0px 0px 60px #9D00FF;
-  animation: text-flicker 3s linear infinite;
+
 
 }
 
-/*
-  font-weight: bold;
-  padding: 0 3em;
-  color: #FF357F;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 900;
-  font-size: 60px;
-  font-family: 'Futura';
-  color: #fff;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
-  text-align: center;
-} */
  /* TEXT */
 .start {
   font-family:'Dosis', sans-serif;
-  color: #4CC417;
+  color: #9D00FF;
   font-size: 40px;
   font-weight: bold;
   margin: 0;
@@ -52,38 +36,33 @@ h1.neon-header {
 	justify-content: center;
 }
 
-.pink-wins {
-  font-size: 20px;
+.yellow-wins { //player one
   font-family:'Dosis', sans-serif;
+  font-size: 20px;
   font-weight: bold;
   width: 6em;
 	padding: 0.3em;
   margin: 3% auto;
   transition: transform .5s;
-  transform:  scale(2);
-  text-shadow: 0px 0px 10px #4CC417,
+  transform:  scale(1);
+  /* text-shadow: 0px 0px 10px #4CC417,
   0px 0px 20px #4CC417,
   0px 0px 30px #4CC417,
   0px 0px 40px #4CC417,
   0px 0px 50px #4CC417,
-  0px 0px 60px #4CC417;
+  0px 0px 60px #4CC417; */
+  /* animation: pulsating 3s infinite; */
 }
 
-.light-blue-wins {
-  font-family: 'Dosis', sans-serif;
+.green-wins {
+  font-family:'Dosis', sans-serif;
   font-size: 20px;
   font-weight: bold;
-  width: 0.02em;
+  width: 6em;
 	padding: 0.3em;
   margin: 3% auto;
   transition: transform .5s;
-  transform:  scale(2);
-  text-shadow: 0px 0px 10px #4CC417,
-  0px 0px 20px #4CC417,
-  0px 0px 30px #4CC417,
-  0px 0px 40px #4CC417,
-  0px 0px 50px #4CC417,
-  0px 0px 60px #4CC417;
+  transform:  scale(1);
 }
 /* TOP BUTTONS  */
 .container {
@@ -107,20 +86,6 @@ h1.neon-header {
   padding: 0 3em;
   border: none;
 }
-/* .circle-button {
-  display: inline-block;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 0.6em;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0 auto;
-  padding: 0 1.3em;
-  border: none;
-  background-color: transparent;
-  color: #cd4985;
-} */
-
 
  /* GAMEBOARD AND CIRCLES AND CHIPS */
 #gameboard {
@@ -142,23 +107,23 @@ h1.neon-header {
   border-radius: 50%;
   margin: 1%;
   padding: 2%;
-  box-shadow: 5px 2px 2px 2px #888888;
+  box-shadow: 3px 2px 2px 2px #888888;
 }
 
 
-.pink-chip {
+.green-chip {
   width: 3.7em;
 	height: 3.7em;
-	background:#F3F315;
+	background:#33FF00;
   border-radius: 50%;
   margin: 1%;
   padding: 2%;
 }
 
-.light-blue-chip {
+.yellow-chip {
   width: 3.7em;
 	height: 3.7em;
-	background: #39ff14;
+	background: #F3F315;
   border-radius: 50%;
   margin: 1%;
   padding: 2%;
@@ -174,8 +139,46 @@ h1.neon-header {
   text-align: center;
   text-transform: uppercase;
   padding: 1em 3em;
-  background: rgba(59,173,227,1);
-  background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+  background: #9D00FF;
   border: 2px solid #4CC417;
 }
- /* ANIMATION */
+ /* ANIMATION TOP HEADER */
+@keyframes flickering-1 {
+    0% { opacity: 1; }
+    52% { opacity: 1; }
+    55% { opacity: 0; }
+    56% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes flickering-2 {
+  0% { opacity: 1; }
+  62% { opacity: 1; }
+  65% { opacity: 0; }
+  66% { opacity: 1; }
+  69% { opacity: 0; }
+  70% { opacity: 1; }
+  73% { opacity: 0; }
+  74% { opacity: 1; }
+  100% { opacity: 1; }
+}
+@keyframes flickering-3 {
+  0% { opacity: 1; }
+  82% { opacity: 1; }
+  84% { opacity: 0; }
+  85% { opacity: 1; }
+  87% { opacity: 0; }
+  88% { opacity: 1; }
+  90% { opacity: 0; }
+  91% { opacity: 1; }
+  100% { opacity: 1;}
+}
+/* FLICKERING ANIMATION h1  */
+span.flickering-1 {
+  animation: flickering-1 6s infinite;
+}
+span.flickering-2 {
+  animation: flickering-2 3s infinite;
+}
+span.flickering-3 {
+  animation: flickering-3 5s infinite;
+}
