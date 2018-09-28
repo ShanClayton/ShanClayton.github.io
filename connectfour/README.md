@@ -3,7 +3,6 @@
 ## ${1:Connect Four}
 A two-player game in which players take turns dropping one colored discs Take turns dropping checkers into a grid to create a line or 4 In a row diagonally, horizontally or vertically. The first player to create 4 in a row, wins.
 
-![_users_sclayton_shanclayton github io_connectfour_index html](https://media.git.generalassemb.ly/user/16038/files/b3a5002e-c2a3-11e8-8d3e-213565dc7376)
 
 ## Installation
 TODO: Describe the installation process
