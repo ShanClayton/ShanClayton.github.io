@@ -131,6 +131,17 @@ h1.neon-header {
   background: #9D00FF;
   border: 2px solid #4CC417;
 }
+
+/* FOOTER */
+footer {
+  text-align: justify;
+  text-transform: uppercase;
+  color: #F3F315;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 20px;
+  letter-spacing: .08em;
+}
  /* ANIMATION TOP HEADER */
 @keyframes flickering-1 {
     0% { opacity: 1; }
