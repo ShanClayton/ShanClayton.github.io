@@ -8,7 +8,8 @@ A two-player game in which players take turns dropping one colored discs Take tu
 HTML, CSS, JavaScript, jQuery
 
 ## Getting started
-Live Link: https://shanclayton.github.io/connectfour/
+Live Link: https://shanclayton.github.io/connectfour/ 
+<br>
 No installation is required, game is ready to play. Yellow player goes first and players can click top buttons to drop disk into desired slot. Once players connect four disks, a message renders declaring winner. 
 
 ## Next Steps
