@@ -20,15 +20,15 @@ $(() => {
     console.log('testing chipFunction'); // click listener is working
 
     if (toggle) {
-      $(column).addClass('light-blue-chip'); // if toggle is true, it will add the class of light-blue chip to the $gameBoardDiv created below
+      $(column).addClass('yellow-chip'); // if toggle is true, it will add the class of light-blue chip to the $gameBoardDiv created below
 
-      $nextTurn.text("Player Two"); // when light-blue chip is added to the div, the p tag will change to player 2 (pink) turn
-      $nextTurn.css('color', '#4CC417'); // changing the color of the p tag to pink
+      $nextTurn.text("Player One"); // when light-blue chip is added to the div, the p tag will change to player 2 (pink) turn
+      $nextTurn.css('color', '#F3F315'); // changing the color of the p tag to pink
     } else {
-      $(column).addClass('pink-chip'); // if toggle is false, it will add the class of the pink-chip to the $gameBoardDiv
+      $(column).addClass('green-chip'); // if toggle is false, it will add the class of the green-chip to the $gameBoardDiv
 
-      $nextTurn.text("Player One"); // when pink-chip is added to the div, the p tag will change to player 1 (light blue) turn
-      $nextTurn.css('color', '#F3F315'); // changing the color of the p tag to light blue
+      $nextTurn.text("Player Two"); // when green-chip is added to the div, the p tag will change to player 1 (light blue) turn
+      $nextTurn.css('color', '#39ff14'); // changing the color of the p tag to light blue
     };
 
       toggle = !toggle; // alternates the turns between light blue and pink
@@ -79,7 +79,7 @@ $(() => {
 
     $button1Id.on('click', function(){ // when button is clicked, the for loop will run
       for (let i = 0; i < column1.length; i++) {
-        if ($(column1[i]).hasClass('light-blue-chip') || column1[i].hasClass('pink-chip')) { // if it has a light blue or pink button do nothing
+        if ($(column1[i]).hasClass('yellow-chip') || column1[i].hasClass('green-chip')) { // if it has a light blue or pink button do nothing
         } else { // else, run the chipFunction which will switch from light-blue to pink token
           chipFunction(column1[i]); // this makes the chip start with player one (light-blue) because toggle is set to true
           break; // this will stop the column from being filled out completely
@@ -89,7 +89,7 @@ $(() => {
 
     $button2Id.on('click', function(){
       for (let i = 0; i < column2.length; i++) {
-        if (column2[i].hasClass('light-blue-chip') || column2[i].hasClass('pink-chip')) {
+        if (column2[i].hasClass('yellow-chip') || column2[i].hasClass('green-chip')) {
         } else {
           chipFunction(column2[i]);
           break;
@@ -99,8 +99,7 @@ $(() => {
 
     $button3Id.on('click', function(){
       for (let i = 0; i < column3.length; i++) {
-        if (column3[i].hasClass('light-blue-chip') || column3[i].hasClass('pink-chip')) {
-
+        if (column3[i].hasClass('yellow-chip') || column3[i].hasClass('green-chip')) {
         } else {
           chipFunction(column3[i]);
           break;
@@ -110,7 +109,7 @@ $(() => {
 
     $button4Id.on('click', function(){
       for (let i = 0; i < column4.length; i++) {
-        if (column4[i].hasClass('light-blue-chip') || column4[i].hasClass('pink-chip')) {
+        if (column4[i].hasClass('yellow-chip') || column4[i].hasClass('green-chip')) {
         } else {
           chipFunction(column4[i]);
           break;
@@ -120,8 +119,7 @@ $(() => {
 
     $button5Id.on('click', function(){
       for (let i = 0; i < column5.length; i++) {
-        if (column5[i].hasClass('light-blue-chip') || column5[i].hasClass('blue-pink')) {
-
+        if (column5[i].hasClass('yellow-chip') || column5[i].hasClass('green-chip')) {
         } else {
           chipFunction(column5[i]);
           break;
@@ -131,8 +129,7 @@ $(() => {
 
     $button6Id.on('click', function(){
       for (let i = 0; i < column6.length; i++) {
-        if (column6[i].hasClass('light-blue-chip') || column6[i].hasClass('pink-chip')) {
-
+        if (column6[i].hasClass('yellow-chip') || column6[i].hasClass('green-chip')) {
         } else {
           chipFunction(column6[i]);
           break;
@@ -142,8 +139,7 @@ $(() => {
 
     $button7Id.on('click', function(){
       for (let i = 0; i < column7.length; i++) {
-        if (column7[i].hasClass('light-blue-chip') || column7[i].hasClass('pink-chip')) {
-
+        if (column7[i].hasClass('yellow-chip') || column7[i].hasClass('green-chip')) {
         } else {
           chipFunction(column7[i]);
           break;
@@ -158,181 +154,181 @@ $(() => {
 //CHECK WINS amd commiting DRY :( (5)
   const checkWins = function() {
   // horizontal row a
-  if ($('#35').hasClass('light-blue-chip') && $('#36').hasClass('light-blue-chip') && $('#37').hasClass('light-blue-chip') && $('#38').hasClass('light-blue-chip') ||
-      $('#36').hasClass('light-blue-chip') && $('#37').hasClass('light-blue-chip') && $('#38').hasClass('light-blue-chip') && $('#39').hasClass('light-blue-chip') ||
-      $('#37').hasClass('light-blue-chip') && $('#38').hasClass('light-blue-chip') && $('#39').hasClass('light-blue-chip') && $('#40').hasClass('light-blue-chip') ||
-      $('#38').hasClass('light-blue-chip') && $('#39').hasClass('light-blue-chip') && $('#40').hasClass('light-blue-chip') && $('#41').hasClass('light-blue-chip') ||
+      if ($('#35').hasClass('yellow-chip') && $('#36').hasClass('yellow-chip') && $('#37').hasClass('yellow-chip') && $('#38').hasClass('yellow-chip') ||
+      $('#36').hasClass('yellow-chip') && $('#37').hasClass('yellow-chip') && $('#38').hasClass('yellow-chip') && $('#39').hasClass('yellow-chip') ||
+      $('#37').hasClass('yellow-chip') && $('#38').hasClass('yellow-chip') && $('#39').hasClass('yellow-chip') && $('#40').hasClass('yellow-chip') ||
+      $('#38').hasClass('yellow-chip') && $('#39').hasClass('yellow-chip') && $('#40').hasClass('yellow-chip') && $('#41').hasClass('yellow-chip') ||
       // horizontal row b
-      $('#28').hasClass('light-blue-chip') && $('#29').hasClass('light-blue-chip') && $('#30').hasClass('light-blue-chip') && $('#31').hasClass('light-blue-chip') ||
-      $('#29').hasClass('light-blue-chip') && $('#30').hasClass('light-blue-chip') && $('#31').hasClass('light-blue-chip') && $('#32').hasClass('light-blue-chip') ||
-      $('#30').hasClass('light-blue-chip') && $('#31').hasClass('light-blue-chip') && $('#32').hasClass('light-blue-chip') && $('#33').hasClass('light-blue-chip') ||
-      $('#31').hasClass('light-blue-chip') && $('#32').hasClass('light-blue-chip') && $('#33').hasClass('light-blue-chip') && $('#34').hasClass('light-blue-chip') ||
+      $('#28').hasClass('yellow-chip') && $('#29').hasClass('yellow-chip') && $('#30').hasClass('yellow-chip') && $('#31').hasClass('yellow-chip') ||
+      $('#29').hasClass('yellow-chip') && $('#30').hasClass('yellow-chip') && $('#31').hasClass('yellow-chip') && $('#32').hasClass('yellow-chip') ||
+      $('#30').hasClass('yellow-chip') && $('#31').hasClass('yellow-chip') && $('#32').hasClass('yellow-chip') && $('#33').hasClass('yellow-chip') ||
+      $('#31').hasClass('yellow-chip') && $('#32').hasClass('yellow-chip') && $('#33').hasClass('yellow-chip') && $('#34').hasClass('yellow-chip') ||
       // horizontal row c
-      $('#21').hasClass('light-blue-chip') && $('#22').hasClass('light-blue-chip') && $('#23').hasClass('light-blue-chip') && $('#24').hasClass('light-blue-chip') ||
-      $('#22').hasClass('light-blue-chip') && $('#23').hasClass('light-blue-chip') && $('#24').hasClass('light-blue-chip') && $('#25').hasClass('light-blue-chip') ||
-      $('#23').hasClass('light-blue-chip') && $('#24').hasClass('light-blue-chip') && $('#25').hasClass('light-blue-chip') && $('#26').hasClass('light-blue-chip') ||
-      $('#24').hasClass('light-blue-chip') && $('#25').hasClass('light-blue-chip') && $('#26').hasClass('light-blue-chip') && $('#27').hasClass('light-blue-chip') ||
+      $('#21').hasClass('yellow-chip') && $('#22').hasClass('yellow-chip') && $('#23').hasClass('yellow-chip') && $('#24').hasClass('yellow-chip') ||
+      $('#22').hasClass('yellow-chip') && $('#23').hasClass('yellow-chip') && $('#24').hasClass('yellow-chip') && $('#25').hasClass('yellow-chip') ||
+      $('#23').hasClass('yellow-chip') && $('#24').hasClass('yellow-chip') && $('#25').hasClass('yellow-chip') && $('#26').hasClass('yellow-chip') ||
+      $('#24').hasClass('yellow-chip') && $('#25').hasClass('yellow-chip') && $('#26').hasClass('yellow-chip') && $('#27').hasClass('yellow-chip') ||
       // horizontal row d
-      $('#14').hasClass('light-blue-chip') && $('#15').hasClass('light-blue-chip') && $('#16').hasClass('light-blue-chip') && $('#17').hasClass('light-blue-chip') ||
-      $('#15').hasClass('light-blue-chip') && $('#16').hasClass('light-blue-chip') && $('#17').hasClass('light-blue-chip') && $('#18').hasClass('light-blue-chip') ||
-      $('#16').hasClass('light-blue-chip') && $('#17').hasClass('light-blue-chip') && $('#18').hasClass('light-blue-chip') && $('#19').hasClass('light-blue-chip') ||
-      $('#17').hasClass('light-blue-chip') && $('#18').hasClass('light-blue-chip') && $('#19').hasClass('light-blue-chip') && $('#20').hasClass('light-blue-chip') ||
+      $('#14').hasClass('yellow-chip') && $('#15').hasClass('yellow-chip') && $('#16').hasClass('yellow-chip') && $('#17').hasClass('yellow-chip') ||
+      $('#15').hasClass('yellow-chip') && $('#16').hasClass('yellow-chip') && $('#17').hasClass('yellow-chip') && $('#18').hasClass('yellow-chip') ||
+      $('#16').hasClass('yellow-chip') && $('#17').hasClass('yellow-chip') && $('#18').hasClass('yellow-chip') && $('#19').hasClass('yellow-chip') ||
+      $('#17').hasClass('yellow-chip') && $('#18').hasClass('yellow-chip') && $('#19').hasClass('yellow-chip') && $('#20').hasClass('yellow-chip') ||
       // horizontal row e
-      $('#7').hasClass('light-blue-chip') && $('#8').hasClass('light-blue-chip') && $('#9').hasClass('light-blue-chip') && $('#10').hasClass('light-blue-chip') ||
-      $('#8').hasClass('light-blue-chip') && $('#9').hasClass('light-blue-chip') && $('#10').hasClass('light-blue-chip') && $('#11').hasClass('light-blue-chip') ||
-      $('#9').hasClass('light-blue-chip') && $('#10').hasClass('light-blue-chip') && $('#11').hasClass('light-blue-chip') && $('#12').hasClass('light-blue-chip') ||
-      $('#10').hasClass('light-blue-chip') && $('#11').hasClass('light-blue-chip') && $('#12').hasClass('light-blue-chip') && $('#13').hasClass('light-blue-chip') ||
+      $('#7').hasClass('yellow-chip') && $('#8').hasClass('yellow-chip') && $('#9').hasClass('yellow-chip') && $('#10').hasClass('yellow-chip') ||
+      $('#8').hasClass('yellow-chip') && $('#9').hasClass('yellow-chip') && $('#10').hasClass('yellow-chip') && $('#11').hasClass('yellow-chip') ||
+      $('#9').hasClass('yellow-chip') && $('#10').hasClass('yellow-chip') && $('#11').hasClass('yellow-chip') && $('#12').hasClass('yellow-chip') ||
+      $('#10').hasClass('yellow-chip') && $('#11').hasClass('yellow-chip') && $('#12').hasClass('yellow-chip') && $('#13').hasClass('yellow-chip') ||
       // horizontal row f
-      $('#0').hasClass('light-blue-chip') && $('#1').hasClass('light-blue-chip') && $('#2').hasClass('light-blue-chip') && $('#3').hasClass('light-blue-chip') ||
-      $('#1').hasClass('light-blue-chip') && $('#2').hasClass('light-blue-chip') && $('#3').hasClass('light-blue-chip') && $('#4').hasClass('light-blue-chip') ||
-      $('#2').hasClass('light-blue-chip') && $('#3').hasClass('light-blue-chip') && $('#4').hasClass('light-blue-chip') && $('#5').hasClass('light-blue-chip') ||
-      $('#3').hasClass('light-blue-chip') && $('#4').hasClass('light-blue-chip') && $('#5').hasClass('light-blue-chip') && $('#6').hasClass('light-blue-chip') ||
+      $('#0').hasClass('yellow-chip') && $('#1').hasClass('yellow-chip') && $('#2').hasClass('yellow-chip') && $('#3').hasClass('yellow-chip') ||
+      $('#1').hasClass('yellow-chip') && $('#2').hasClass('yellow-chip') && $('#3').hasClass('yellow-chip') && $('#4').hasClass('yellow-chip') ||
+      $('#2').hasClass('yellow-chip') && $('#3').hasClass('yellow-chip') && $('#4').hasClass('yellow-chip') && $('#5').hasClass('yellow-chip') ||
+      $('#3').hasClass('yellow-chip') && $('#4').hasClass('yellow-chip') && $('#5').hasClass('yellow-chip') && $('#6').hasClass('yellow-chip') ||
       // vertical column a
-      $('#35').hasClass('light-blue-chip') && $('#28').hasClass('light-blue-chip') && $('#21').hasClass('light-blue-chip') && $('#14').hasClass('light-blue-chip') ||
-      $('#28').hasClass('light-blue-chip') && $('#21').hasClass('light-blue-chip') && $('#14').hasClass('light-blue-chip') && $('#7').hasClass('light-blue-chip') ||
-      $('#21').hasClass('light-blue-chip') && $('#14').hasClass('light-blue-chip') && $('#7').hasClass('light-blue-chip') && $('#0').hasClass('light-blue-chip') ||
+      $('#35').hasClass('yellow-chip') && $('#28').hasClass('yellow-chip') && $('#21').hasClass('yellow-chip') && $('#14').hasClass('yellow-chip') ||
+      $('#28').hasClass('yellow-chip') && $('#21').hasClass('yellow-chip') && $('#14').hasClass('yellow-chip') && $('#7').hasClass('yellow-chip') ||
+      $('#21').hasClass('yellow-chip') && $('#14').hasClass('yellow-chip') && $('#7').hasClass('yellow-chip') && $('#0').hasClass('yellow-chip') ||
       // vertical column b
-      $('#36').hasClass('light-blue-chip') && $('#29').hasClass('light-blue-chip') && $('#22').hasClass('light-blue-chip') && $('#15').hasClass('light-blue-chip') ||
-      $('#29').hasClass('light-blue-chip') && $('#22').hasClass('light-blue-chip') && $('#15').hasClass('light-blue-chip') && $('#8').hasClass('light-blue-chip') ||
-      $('#22').hasClass('light-blue-chip') && $('#15').hasClass('light-blue-chip') && $('#8').hasClass('light-blue-chip') && $('#1').hasClass('light-blue-chip') ||
+      $('#36').hasClass('yellow-chip') && $('#29').hasClass('yellow-chip') && $('#22').hasClass('yellow-chip') && $('#15').hasClass('yellow-chip') ||
+      $('#29').hasClass('yellow-chip') && $('#22').hasClass('yellow-chip') && $('#15').hasClass('yellow-chip') && $('#8').hasClass('yellow-chip') ||
+      $('#22').hasClass('yellow-chip') && $('#15').hasClass('yellow-chip') && $('#8').hasClass('yellow-chip') && $('#1').hasClass('yellow-chip') ||
       // vertical column c
-      $('#37').hasClass('light-blue-chip') && $('#30').hasClass('light-blue-chip') && $('#23').hasClass('light-blue-chip') && $('#16').hasClass('light-blue-chip') ||
-      $('#30').hasClass('light-blue-chip') && $('#23').hasClass('light-blue-chip') && $('#16').hasClass('light-blue-chip') && $('#9').hasClass('light-blue-chip') ||
-      $('#23').hasClass('light-blue-chip') && $('#16').hasClass('light-blue-chip') && $('#9').hasClass('light-blue-chip') && $('#2').hasClass('light-blue-chip') ||
+      $('#37').hasClass('yellow-chip') && $('#30').hasClass('yellow-chip') && $('#23').hasClass('yellow-chip') && $('#16').hasClass('yellow-chip') ||
+      $('#30').hasClass('yellow-chip') && $('#23').hasClass('yellow-chip') && $('#16').hasClass('yellow-chip') && $('#9').hasClass('yellow-chip') ||
+      $('#23').hasClass('yellow-chip') && $('#16').hasClass('yellow-chip') && $('#9').hasClass('yellow-chip') && $('#2').hasClass('yellow-chip') ||
       // vertical column d
-      $('#38').hasClass('light-blue-chip') && $('#31').hasClass('light-blue-chip') && $('#24').hasClass('light-blue-chip') && $('#17').hasClass('light-blue-chip') ||
-      $('#31').hasClass('light-blue-chip') && $('#24').hasClass('light-blue-chip') && $('#17').hasClass('light-blue-chip') && $('#10').hasClass('light-blue-chip') ||
-      $('#24').hasClass('light-blue-chip') && $('#17').hasClass('light-blue-chip') && $('#10').hasClass('light-blue-chip') && $('#3').hasClass('light-blue-chip') ||
+      $('#38').hasClass('yellow-chip') && $('#31').hasClass('yellow-chip') && $('#24').hasClass('yellow-chip') && $('#17').hasClass('yellow-chip') ||
+      $('#31').hasClass('yellow-chip') && $('#24').hasClass('yellow-chip') && $('#17').hasClass('yellow-chip') && $('#10').hasClass('yellow-chip') ||
+      $('#24').hasClass('yellow-chip') && $('#17').hasClass('yellow-chip') && $('#10').hasClass('yellow-chip') && $('#3').hasClass('yellow-chip') ||
       // vertical column e
-      $('#39').hasClass('light-blue-chip') && $('#32').hasClass('light-blue-chip') && $('#25').hasClass('light-blue-chip') && $('#18').hasClass('light-blue-chip') ||
-      $('#32').hasClass('light-blue-chip') && $('#25').hasClass('light-blue-chip') && $('#18').hasClass('light-blue-chip') && $('#11').hasClass('light-blue-chip') ||
-      $('#25').hasClass('light-blue-chip') && $('#18').hasClass('light-blue-chip') && $('#11').hasClass('light-blue-chip') && $('#4').hasClass('light-blue-chip') ||
+      $('#39').hasClass('yellow-chip') && $('#32').hasClass('yellow-chip') && $('#25').hasClass('yellow-chip') && $('#18').hasClass('yellow-chip') ||
+      $('#32').hasClass('yellow-chip') && $('#25').hasClass('yellow-chip') && $('#18').hasClass('yellow-chip') && $('#11').hasClass('yellow-chip') ||
+      $('#25').hasClass('yellow-chip') && $('#18').hasClass('yellow-chip') && $('#11').hasClass('yellow-chip') && $('#4').hasClass('yellow-chip') ||
       // vertical column f
-      $('#40').hasClass('light-blue-chip') && $('#33').hasClass('light-blue-chip') && $('#26').hasClass('light-blue-chip') && $('#19').hasClass('light-blue-chip') ||
-      $('#33').hasClass('light-blue-chip') && $('#26').hasClass('light-blue-chip') && $('#19').hasClass('light-blue-chip') && $('#12').hasClass('light-blue-chip') ||
-      $('#26').hasClass('light-blue-chip') && $('#19').hasClass('light-blue-chip') && $('#12').hasClass('light-blue-chip') && $('#5').hasClass('light-blue-chip') ||
+      $('#40').hasClass('yellow-chip') && $('#33').hasClass('yellow-chip') && $('#26').hasClass('yellow-chip') && $('#19').hasClass('yellow-chip') ||
+      $('#33').hasClass('yellow-chip') && $('#26').hasClass('yellow-chip') && $('#19').hasClass('yellow-chip') && $('#12').hasClass('yellow-chip') ||
+      $('#26').hasClass('yellow-chip') && $('#19').hasClass('yellow-chip') && $('#12').hasClass('yellow-chip') && $('#5').hasClass('yellow-chip') ||
       // vertical column g
-      $('#41').hasClass('light-blue-chip') && $('#34').hasClass('light-blue-chip') && $('#27').hasClass('light-blue-chip') && $('#20').hasClass('light-blue-chip') ||
-      $('#34').hasClass('light-blue-chip') && $('#27').hasClass('light-blue-chip') && $('#20').hasClass('light-blue-chip') && $('#13').hasClass('light-blue-chip') ||
-      $('#27').hasClass('light-blue-chip') && $('#20').hasClass('light-blue-chip') && $('#13').hasClass('light-blue-chip') && $('#6').hasClass('light-blue-chip') ||
+      $('#41').hasClass('yellow-chip') && $('#34').hasClass('yellow-chip') && $('#27').hasClass('yellow-chip') && $('#20').hasClass('yellow-chip') ||
+      $('#34').hasClass('yellow-chip') && $('#27').hasClass('yellow-chip') && $('#20').hasClass('yellow-chip') && $('#13').hasClass('yellow-chip') ||
+      $('#27').hasClass('yellow-chip') && $('#20').hasClass('yellow-chip') && $('#13').hasClass('yellow-chip') && $('#6').hasClass('yellow-chip') ||
       // Diagonal R
-      $('#21').hasClass('light-blue-chip') && $('#15').hasClass('light-blue-chip') && $('#9').hasClass('light-blue-chip') && $('#3').hasClass('light-blue-chip') ||
-      $('#28').hasClass('light-blue-chip') && $('#22').hasClass('light-blue-chip') && $('#16').hasClass('light-blue-chip') && $('#10').hasClass('light-blue-chip') ||
-      $('#22').hasClass('light-blue-chip') && $('#16').hasClass('light-blue-chip') && $('#10').hasClass('light-blue-chip') && $('#4').hasClass('light-blue-chip') ||
-      $('#35').hasClass('light-blue-chip') && $('#29').hasClass('light-blue-chip') && $('#23').hasClass('light-blue-chip') && $('#17').hasClass('light-blue-chip') ||
-      $('#29').hasClass('light-blue-chip') && $('#23').hasClass('light-blue-chip') && $('#17').hasClass('light-blue-chip') && $('#11').hasClass('light-blue-chip') ||
-      $('#23').hasClass('light-blue-chip') && $('#17').hasClass('light-blue-chip') && $('#11').hasClass('light-blue-chip') && $('#5').hasClass('light-blue-chip') ||
-      $('#36').hasClass('light-blue-chip') && $('#30').hasClass('light-blue-chip') && $('#24').hasClass('light-blue-chip') && $('#18').hasClass('light-blue-chip') ||
-      $('#30').hasClass('light-blue-chip') && $('#24').hasClass('light-blue-chip') && $('#18').hasClass('light-blue-chip') && $('#12').hasClass('light-blue-chip') ||
-      $('#24').hasClass('light-blue-chip') && $('#18').hasClass('light-blue-chip') && $('#12').hasClass('light-blue-chip') && $('#6').hasClass('light-blue-chip') ||
-      $('#37').hasClass('light-blue-chip') && $('#31').hasClass('light-blue-chip') && $('#25').hasClass('light-blue-chip') && $('#19').hasClass('light-blue-chip') ||
-      $('#31').hasClass('light-blue-chip') && $('#25').hasClass('light-blue-chip') && $('#19').hasClass('light-blue-chip') && $('#13').hasClass('light-blue-chip') ||
-      $('#38').hasClass('light-blue-chip') && $('#32').hasClass('light-blue-chip') && $('#26').hasClass('light-blue-chip') && $('#20').hasClass('light-blue-chip') ||
+      $('#21').hasClass('yellow-chip') && $('#15').hasClass('yellow-chip') && $('#9').hasClass('yellow-chip') && $('#3').hasClass('yellow-chip') ||
+      $('#28').hasClass('yellow-chip') && $('#22').hasClass('yellow-chip') && $('#16').hasClass('yellow-chip') && $('#10').hasClass('yellow-chip') ||
+      $('#22').hasClass('yellow-chip') && $('#16').hasClass('yellow-chip') && $('#10').hasClass('yellow-chip') && $('#4').hasClass('yellow-chip') ||
+      $('#35').hasClass('yellow-chip') && $('#29').hasClass('yellow-chip') && $('#23').hasClass('yellow-chip') && $('#17').hasClass('yellow-chip') ||
+      $('#29').hasClass('yellow-chip') && $('#23').hasClass('yellow-chip') && $('#17').hasClass('yellow-chip') && $('#11').hasClass('yellow-chip') ||
+      $('#23').hasClass('yellow-chip') && $('#17').hasClass('yellow-chip') && $('#11').hasClass('yellow-chip') && $('#5').hasClass('yellow-chip') ||
+      $('#36').hasClass('yellow-chip') && $('#30').hasClass('yellow-chip') && $('#24').hasClass('yellow-chip') && $('#18').hasClass('yellow-chip') ||
+      $('#30').hasClass('yellow-chip') && $('#24').hasClass('yellow-chip') && $('#18').hasClass('yellow-chip') && $('#12').hasClass('yellow-chip') ||
+      $('#24').hasClass('yellow-chip') && $('#18').hasClass('yellow-chip') && $('#12').hasClass('yellow-chip') && $('#6').hasClass('yellow-chip') ||
+      $('#37').hasClass('yellow-chip') && $('#31').hasClass('yellow-chip') && $('#25').hasClass('yellow-chip') && $('#19').hasClass('yellow-chip') ||
+      $('#31').hasClass('yellow-chip') && $('#25').hasClass('yellow-chip') && $('#19').hasClass('yellow-chip') && $('#13').hasClass('yellow-chip') ||
+      $('#38').hasClass('yellow-chip') && $('#32').hasClass('yellow-chip') && $('#26').hasClass('yellow-chip') && $('#20').hasClass('yellow-chip') ||
       // Diagonal L
-      $('#38').hasClass('light-blue-chip') && $('#30').hasClass('light-blue-chip') && $('#22').hasClass('light-blue-chip') && $('#14').hasClass('light-blue-chip') ||
-      $('#39').hasClass('light-blue-chip') && $('#31').hasClass('light-blue-chip') && $('#23').hasClass('light-blue-chip') && $('#15').hasClass('light-blue-chip') ||
-      $('#31').hasClass('light-blue-chip') && $('#23').hasClass('light-blue-chip') && $('#15').hasClass('light-blue-chip') && $('#7').hasClass('light-blue-chip') ||
-      $('#40').hasClass('light-blue-chip') && $('#32').hasClass('light-blue-chip') && $('#24').hasClass('light-blue-chip') && $('#16').hasClass('light-blue-chip') ||
-      $('#32').hasClass('light-blue-chip') && $('#24').hasClass('light-blue-chip') && $('#16').hasClass('light-blue-chip') && $('#8').hasClass('light-blue-chip') ||
-      $('#24').hasClass('light-blue-chip') && $('#16').hasClass('light-blue-chip') && $('#8').hasClass('light-blue-chip') && $('#0').hasClass('light-blue-chip') ||
-      $('#41').hasClass('light-blue-chip') && $('#33').hasClass('light-blue-chip') && $('#25').hasClass('light-blue-chip') && $('#17').hasClass('light-blue-chip') ||
-      $('#33').hasClass('light-blue-chip') && $('#25').hasClass('light-blue-chip') && $('#17').hasClass('light-blue-chip') && $('#9').hasClass('light-blue-chip') ||
-      $('#25').hasClass('light-blue-chip') && $('#17').hasClass('light-blue-chip') && $('#9').hasClass('light-blue-chip') && $('#1').hasClass('light-blue-chip') ||
-      $('#34').hasClass('light-blue-chip') && $('#26').hasClass('light-blue-chip') && $('#18').hasClass('light-blue-chip') && $('#10').hasClass('light-blue-chip') ||
-      $('#26').hasClass('light-blue-chip') && $('#18').hasClass('light-blue-chip') && $('#10').hasClass('light-blue-chip') && $('#2').hasClass('light-blue-chip') ||
-      $('#27').hasClass('light-blue-chip') && $('#19').hasClass('light-blue-chip') && $('#11').hasClass('light-blue-chip') && $('#3').hasClass('light-blue-chip')) {
+      $('#38').hasClass('yellow-chip') && $('#30').hasClass('yellow-chip') && $('#22').hasClass('yellow-chip') && $('#14').hasClass('yellow-chip') ||
+      $('#39').hasClass('yellow-chip') && $('#31').hasClass('yellow-chip') && $('#23').hasClass('yellow-chip') && $('#15').hasClass('yellow-chip') ||
+      $('#31').hasClass('yellow-chip') && $('#23').hasClass('yellow-chip') && $('#15').hasClass('yellow-chip') && $('#7').hasClass('yellow-chip') ||
+      $('#40').hasClass('yellow-chip') && $('#32').hasClass('yellow-chip') && $('#24').hasClass('yellow-chip') && $('#16').hasClass('yellow-chip') ||
+      $('#32').hasClass('yellow-chip') && $('#24').hasClass('yellow-chip') && $('#16').hasClass('yellow-chip') && $('#8').hasClass('yellow-chip') ||
+      $('#24').hasClass('yellow-chip') && $('#16').hasClass('yellow-chip') && $('#8').hasClass('yellow-chip') && $('#0').hasClass('yellow-chip') ||
+      $('#41').hasClass('yellow-chip') && $('#33').hasClass('yellow-chip') && $('#25').hasClass('yellow-chip') && $('#17').hasClass('yellow-chip') ||
+      $('#33').hasClass('yellow-chip') && $('#25').hasClass('yellow-chip') && $('#17').hasClass('yellow-chip') && $('#9').hasClass('yellow-chip') ||
+      $('#25').hasClass('yellow-chip') && $('#17').hasClass('yellow-chip') && $('#9').hasClass('yellow-chip') && $('#1').hasClass('yellow-chip') ||
+      $('#34').hasClass('yellow-chip') && $('#26').hasClass('yellow-chip') && $('#18').hasClass('yellow-chip') && $('#10').hasClass('yellow-chip') ||
+      $('#26').hasClass('yellow-chip') && $('#18').hasClass('yellow-chip') && $('#10').hasClass('yellow-chip') && $('#2').hasClass('yellow-chip') ||
+      $('#27').hasClass('yellow-chip') && $('#19').hasClass('yellow-chip') && $('#11').hasClass('yellow-chip') && $('#3').hasClass('yellow-chip')) {
           $nextTurn.text("Player One Wins!!");
-          $nextTurn.css('color', 'white');
-          $nextTurn.addClass('light-blue-wins');
+          $nextTurn.css('color','#F3F315');
+          $nextTurn.addClass('yellow-wins');
 
   } else if (
       // horizontal row a
-      $('#35').hasClass('pink-chip') && $('#36').hasClass('pink-chip') && $('#37').hasClass('pink-chip') && $('#38').hasClass('pink-chip') ||
-      $('#36').hasClass('pink-chip') && $('#37').hasClass('pink-chip') && $('#38').hasClass('pink-chip') && $('#39').hasClass('pink-chip') ||
-      $('#37').hasClass('pink-chip') && $('#38').hasClass('pink-chip') && $('#39').hasClass('pink-chip') && $('#40').hasClass('pink-chip') ||
-      $('#38').hasClass('pink-chip') && $('#39').hasClass('pink-chip') && $('#40').hasClass('pink-chip') && $('#41').hasClass('pink-chip') ||
+      $('#35').hasClass('green-chip') && $('#36').hasClass('green-chip') && $('#37').hasClass('green-chip') && $('#38').hasClass('green-chip') ||
+      $('#36').hasClass('green-chip') && $('#37').hasClass('green-chip') && $('#38').hasClass('green-chip') && $('#39').hasClass('green-chip') ||
+      $('#37').hasClass('green-chip') && $('#38').hasClass('green-chip') && $('#39').hasClass('green-chip') && $('#40').hasClass('green-chip') ||
+      $('#38').hasClass('green-chip') && $('#39').hasClass('green-chip') && $('#40').hasClass('green-chip') && $('#41').hasClass('green-chip') ||
       // horizontal row b
-      $('#28').hasClass('pink-chip') && $('#29').hasClass('pink-chip') && $('#30').hasClass('pink-chip') && $('#31').hasClass('pink-chip') ||
-      $('#29').hasClass('pink-chip') && $('#30').hasClass('pink-chip') && $('#31').hasClass('pink-chip') && $('#32').hasClass('pink-chip') ||
-      $('#30').hasClass('pink-chip') && $('#31').hasClass('pink-chip') && $('#32').hasClass('pink-chip') && $('#33').hasClass('pink-chip') ||
-      $('#31').hasClass('pink-chip') && $('#32').hasClass('pink-chip') && $('#33').hasClass('pink-chip') && $('#34').hasClass('pink-chip') ||
+      $('#28').hasClass('green-chip') && $('#29').hasClass('green-chip') && $('#30').hasClass('green-chip') && $('#31').hasClass('green-chip') ||
+      $('#29').hasClass('green-chip') && $('#30').hasClass('green-chip') && $('#31').hasClass('green-chip') && $('#32').hasClass('green-chip') ||
+      $('#30').hasClass('green-chip') && $('#31').hasClass('green-chip') && $('#32').hasClass('green-chip') && $('#33').hasClass('green-chip') ||
+      $('#31').hasClass('green-chip') && $('#32').hasClass('green-chip') && $('#33').hasClass('green-chip') && $('#34').hasClass('green-chip') ||
       // horizontal row c
-      $('#21').hasClass('pink-chip') && $('#22').hasClass('pink-chip') && $('#23').hasClass('pink-chip') && $('#24').hasClass('pink-chip') ||
-      $('#22').hasClass('pink-chip') && $('#23').hasClass('pink-chip') && $('#24').hasClass('pink-chip') && $('#25').hasClass('pink-chip') ||
-      $('#23').hasClass('pink-chip') && $('#24').hasClass('pink-chip') && $('#25').hasClass('pink-chip') && $('#26').hasClass('pink-chip') ||
-      $('#24').hasClass('pink-chip') && $('#25').hasClass('pink-chip') && $('#26').hasClass('pink-chip') && $('#27').hasClass('pink-chip') ||
+      $('#21').hasClass('green-chip') && $('#22').hasClass('green-chip') && $('#23').hasClass('green-chip') && $('#24').hasClass('green-chip') ||
+      $('#22').hasClass('green-chip') && $('#23').hasClass('green-chip') && $('#24').hasClass('green-chip') && $('#25').hasClass('green-chip') ||
+      $('#23').hasClass('green-chip') && $('#24').hasClass('green-chip') && $('#25').hasClass('green-chip') && $('#26').hasClass('green-chip') ||
+      $('#24').hasClass('green-chip') && $('#25').hasClass('green-chip') && $('#26').hasClass('green-chip') && $('#27').hasClass('green-chip') ||
       // horizontal row d
-      $('#14').hasClass('pink-chip') && $('#15').hasClass('pink-chip') && $('#16').hasClass('pink-chip') && $('#17').hasClass('pink-chip') ||
-      $('#15').hasClass('pink-chip') && $('#16').hasClass('pink-chip') && $('#17').hasClass('pink-chip') && $('#18').hasClass('pink-chip') ||
-      $('#16').hasClass('pink-chip') && $('#17').hasClass('pink-chip') && $('#18').hasClass('pink-chip') && $('#19').hasClass('pink-chip') ||
-      $('#17').hasClass('pink-chip') && $('#18').hasClass('pink-chip') && $('#19').hasClass('pink-chip') && $('#20').hasClass('pink-chip') ||
+      $('#14').hasClass('green-chip') && $('#15').hasClass('green-chip') && $('#16').hasClass('green-chip') && $('#17').hasClass('green-chip') ||
+      $('#15').hasClass('green-chip') && $('#16').hasClass('green-chip') && $('#17').hasClass('green-chip') && $('#18').hasClass('green-chip') ||
+      $('#16').hasClass('green-chip') && $('#17').hasClass('green-chip') && $('#18').hasClass('green-chip') && $('#19').hasClass('green-chip') ||
+      $('#17').hasClass('green-chip') && $('#18').hasClass('green-chip') && $('#19').hasClass('green-chip') && $('#20').hasClass('green-chip') ||
       // horizontal row e
-      $('#7').hasClass('pink-chip') && $('#8').hasClass('pink-chip') && $('#9').hasClass('pink-chip') && $('#10').hasClass('pink-chip') ||
-      $('#8').hasClass('pink-chip') && $('#9').hasClass('pink-chip') && $('#10').hasClass('pink-chip') && $('#11').hasClass('pink-chip') ||
-      $('#9').hasClass('pink-chip') && $('#10').hasClass('pink-chip') && $('#11').hasClass('pink-chip') && $('#12').hasClass('pink-chip') ||
-      $('#10').hasClass('pink-chip') && $('#11').hasClass('pink-chip') && $('#12').hasClass('pink-chip') && $('#13').hasClass('pink-chip') ||
+      $('#7').hasClass('green-chip') && $('#8').hasClass('green-chip') && $('#9').hasClass('green-chip') && $('#10').hasClass('green-chip') ||
+      $('#8').hasClass('green-chip') && $('#9').hasClass('green-chip') && $('#10').hasClass('green-chip') && $('#11').hasClass('green-chip') ||
+      $('#9').hasClass('green-chip') && $('#10').hasClass('green-chip') && $('#11').hasClass('green-chip') && $('#12').hasClass('green-chip') ||
+      $('#10').hasClass('green-chip') && $('#11').hasClass('green-chip') && $('#12').hasClass('green-chip') && $('#13').hasClass('green-chip') ||
       // horizontal row f
-      $('#0').hasClass('pink-chip') && $('#1').hasClass('pink-chip') && $('#2').hasClass('pink-chip') && $('#3').hasClass('pink-chip') ||
-      $('#1').hasClass('pink-chip') && $('#2').hasClass('pink-chip') && $('#3').hasClass('pink-chip') && $('#4').hasClass('pink-chip') ||
-      $('#2').hasClass('pink-chip') && $('#3').hasClass('pink-chip') && $('#4').hasClass('pink-chip') && $('#5').hasClass('pink-chip') ||
-      $('#3').hasClass('pink-chip') && $('#4').hasClass('pink-chip') && $('#5').hasClass('pink-chip') && $('#6').hasClass('pink-chip') ||
+      $('#0').hasClass('green-chip') && $('#1').hasClass('green-chip') && $('#2').hasClass('green-chip') && $('#3').hasClass('green-chip') ||
+      $('#1').hasClass('green-chip') && $('#2').hasClass('green-chip') && $('#3').hasClass('green-chip') && $('#4').hasClass('green-chip') ||
+      $('#2').hasClass('green-chip') && $('#3').hasClass('green-chip') && $('#4').hasClass('green-chip') && $('#5').hasClass('green-chip') ||
+      $('#3').hasClass('green-chip') && $('#4').hasClass('green-chip') && $('#5').hasClass('green-chip') && $('#6').hasClass('green-chip') ||
       // vertical column a
-      $('#35').hasClass('pink-chip') && $('#28').hasClass('pink-chip') && $('#21').hasClass('pink-chip') && $('#14').hasClass('pink-chip') ||
-      $('#28').hasClass('pink-chip') && $('#21').hasClass('pink-chip') && $('#14').hasClass('pink-chip') && $('#7').hasClass('pink-chip') ||
-      $('#21').hasClass('pink-chip') && $('#14').hasClass('pink-chip') && $('#7').hasClass('pink-chip') && $('#0').hasClass('pink-chip') ||
+      $('#35').hasClass('green-chip') && $('#28').hasClass('green-chip') && $('#21').hasClass('green-chip') && $('#14').hasClass('green-chip') ||
+      $('#28').hasClass('green-chip') && $('#21').hasClass('green-chip') && $('#14').hasClass('green-chip') && $('#7').hasClass('green-chip') ||
+      $('#21').hasClass('green-chip') && $('#14').hasClass('green-chip') && $('#7').hasClass('green-chip') && $('#0').hasClass('green-chip') ||
       // vertical column b
-      $('#36').hasClass('pink-chip') && $('#29').hasClass('pink-chip') && $('#22').hasClass('pink-chip') && $('#15').hasClass('pink-chip') ||
-      $('#29').hasClass('pink-chip') && $('#22').hasClass('pink-chip') && $('#15').hasClass('pink-chip') && $('#8').hasClass('pink-chip') ||
-      $('#22').hasClass('pink-chip') && $('#15').hasClass('pink-chip') && $('#8').hasClass('pink-chip') && $('#1').hasClass('pink-chip') ||
+      $('#36').hasClass('green-chip') && $('#29').hasClass('green-chip') && $('#22').hasClass('green-chip') && $('#15').hasClass('green-chip') ||
+      $('#29').hasClass('green-chip') && $('#22').hasClass('green-chip') && $('#15').hasClass('green-chip') && $('#8').hasClass('green-chip') ||
+      $('#22').hasClass('green-chip') && $('#15').hasClass('green-chip') && $('#8').hasClass('green-chip') && $('#1').hasClass('green-chip') ||
       // vertical column c
-      $('#37').hasClass('pink-chip') && $('#30').hasClass('pink-chip') && $('#23').hasClass('pink-chip') && $('#16').hasClass('pink-chip') ||
-      $('#30').hasClass('pink-chip') && $('#23').hasClass('pink-chip') && $('#16').hasClass('pink-chip') && $('#9').hasClass('pink-chip') ||
-      $('#23').hasClass('pink-chip') && $('#16').hasClass('pink-chip') && $('#9').hasClass('pink-chip') && $('#2').hasClass('pink-chip') ||
+      $('#37').hasClass('green-chip') && $('#30').hasClass('green-chip') && $('#23').hasClass('green-chip') && $('#16').hasClass('green-chip') ||
+      $('#30').hasClass('green-chip') && $('#23').hasClass('green-chip') && $('#16').hasClass('green-chip') && $('#9').hasClass('green-chip') ||
+      $('#23').hasClass('green-chip') && $('#16').hasClass('green-chip') && $('#9').hasClass('green-chip') && $('#2').hasClass('green-chip') ||
       // vertical column d
-      $('#38').hasClass('pink-chip') && $('#31').hasClass('pink-chip') && $('#24').hasClass('pink-chip') && $('#17').hasClass('pink-chip') ||
-      $('#31').hasClass('pink-chip') && $('#24').hasClass('pink-chip') && $('#17').hasClass('pink-chip') && $('#10').hasClass('pink-chip') ||
-      $('#24').hasClass('pink-chip') && $('#17').hasClass('pink-chip') && $('#10').hasClass('pink-chip') && $('#3').hasClass('pink-chip') ||
+      $('#38').hasClass('green-chip') && $('#31').hasClass('green-chip') && $('#24').hasClass('green-chip') && $('#17').hasClass('green-chip') ||
+      $('#31').hasClass('green-chip') && $('#24').hasClass('green-chip') && $('#17').hasClass('green-chip') && $('#10').hasClass('green-chip') ||
+      $('#24').hasClass('green-chip') && $('#17').hasClass('green-chip') && $('#10').hasClass('green-chip') && $('#3').hasClass('green-chip') ||
       // vertical column e
-      $('#39').hasClass('pink-chip') && $('#32').hasClass('pink-chip') && $('#25').hasClass('pink-chip') && $('#18').hasClass('pink-chip') ||
-      $('#32').hasClass('pink-chip') && $('#25').hasClass('pink-chip') && $('#18').hasClass('pink-chip') && $('#11').hasClass('pink-chip') ||
-      $('#25').hasClass('pink-chip') && $('#18').hasClass('pink-chip') && $('#11').hasClass('pink-chip') && $('#4').hasClass('pink-chip') ||
+      $('#39').hasClass('green-chip') && $('#32').hasClass('green-chip') && $('#25').hasClass('green-chip') && $('#18').hasClass('green-chip') ||
+      $('#32').hasClass('green-chip') && $('#25').hasClass('green-chip') && $('#18').hasClass('green-chip') && $('#11').hasClass('green-chip') ||
+      $('#25').hasClass('green-chip') && $('#18').hasClass('green-chip') && $('#11').hasClass('green-chip') && $('#4').hasClass('green-chip') ||
       // vertical column f
-      $('#40').hasClass('pink-chip') && $('#33').hasClass('pink-chip') && $('#26').hasClass('pink-chip') && $('#19').hasClass('pink-chip') ||
-      $('#33').hasClass('pink-chip') && $('#26').hasClass('pink-chip') && $('#19').hasClass('pink-chip') && $('#12').hasClass('pink-chip') ||
-      $('#26').hasClass('pink-chip') && $('#19').hasClass('pink-chip') && $('#12').hasClass('pink-chip') && $('#5').hasClass('pink-chip') ||
+      $('#40').hasClass('green-chip') && $('#33').hasClass('green-chip') && $('#26').hasClass('green-chip') && $('#19').hasClass('green-chip') ||
+      $('#33').hasClass('green-chip') && $('#26').hasClass('green-chip') && $('#19').hasClass('green-chip') && $('#12').hasClass('green-chip') ||
+      $('#26').hasClass('green-chip') && $('#19').hasClass('green-chip') && $('#12').hasClass('green-chip') && $('#5').hasClass('green-chip') ||
       // vertical column g
-      $('#41').hasClass('pink-chip') && $('#34').hasClass('pink-chip') && $('#27').hasClass('pink-chip') && $('#20').hasClass('pink-chip') ||
-      $('#34').hasClass('pink-chip') && $('#27').hasClass('pink-chip') && $('#20').hasClass('pink-chip') && $('#13').hasClass('pink-chip') ||
-      $('#27').hasClass('pink-chip') && $('#20').hasClass('pink-chip') && $('#13').hasClass('pink-chip') && $('#6').hasClass('pink-chip') ||
+      $('#41').hasClass('green-chip') && $('#34').hasClass('green-chip') && $('#27').hasClass('green-chip') && $('#20').hasClass('green-chip') ||
+      $('#34').hasClass('green-chip') && $('#27').hasClass('green-chip') && $('#20').hasClass('green-chip') && $('#13').hasClass('green-chip') ||
+      $('#27').hasClass('green-chip') && $('#20').hasClass('green-chip') && $('#13').hasClass('green-chip') && $('#6').hasClass('green-chip') ||
       // Diagonal R
-      $('#21').hasClass('pink-chip') && $('#15').hasClass('pink-chip') && $('#9').hasClass('pink-chip') && $('#3').hasClass('pink-chip') ||
-      $('#28').hasClass('pink-chip') && $('#22').hasClass('pink-chip') && $('#16').hasClass('pink-chip') && $('#10').hasClass('pink-chip') ||
-      $('#22').hasClass('pink-chip') && $('#16').hasClass('pink-chip') && $('#10').hasClass('pink-chip') && $('#4').hasClass('pink-chip') ||
-      $('#35').hasClass('pink-chip') && $('#29').hasClass('pink-chip') && $('#23').hasClass('pink-chip') && $('#17').hasClass('pink-chip') ||
-      $('#29').hasClass('pink-chip') && $('#23').hasClass('pink-chip') && $('#17').hasClass('pink-chip') && $('#11').hasClass('pink-chip') ||
-      $('#23').hasClass('pink-chip') && $('#17').hasClass('pink-chip') && $('#11').hasClass('pink-chip') && $('#5').hasClass('pink-chip') ||
-      $('#36').hasClass('pink-chip') && $('#30').hasClass('pink-chip') && $('#24').hasClass('pink-chip') && $('#18').hasClass('pink-chip') ||
-      $('#30').hasClass('pink-chip') && $('#24').hasClass('pink-chip') && $('#18').hasClass('pink-chip') && $('#12').hasClass('pink-chip') ||
-      $('#24').hasClass('pink-chip') && $('#18').hasClass('pink-chip') && $('#12').hasClass('pink-chip') && $('#6').hasClass('pink-chip') ||
-      $('#37').hasClass('pink-chip') && $('#31').hasClass('pink-chip') && $('#25').hasClass('pink-chip') && $('#19').hasClass('pink-chip') ||
-      $('#31').hasClass('pink-chip') && $('#25').hasClass('pink-chip') && $('#19').hasClass('pink-chip') && $('#13').hasClass('pink-chip') ||
-      $('#38').hasClass('pink-chip') && $('#32').hasClass('pink-chip') && $('#26').hasClass('pink-chip') && $('#20').hasClass('pink-chip') ||
+      $('#21').hasClass('green-chip') && $('#15').hasClass('green-chip') && $('#9').hasClass('green-chip') && $('#3').hasClass('green-chip') ||
+      $('#28').hasClass('green-chip') && $('#22').hasClass('green-chip') && $('#16').hasClass('green-chip') && $('#10').hasClass('green-chip') ||
+      $('#22').hasClass('green-chip') && $('#16').hasClass('green-chip') && $('#10').hasClass('green-chip') && $('#4').hasClass('green-chip') ||
+      $('#35').hasClass('green-chip') && $('#29').hasClass('green-chip') && $('#23').hasClass('green-chip') && $('#17').hasClass('green-chip') ||
+      $('#29').hasClass('green-chip') && $('#23').hasClass('green-chip') && $('#17').hasClass('green-chip') && $('#11').hasClass('green-chip') ||
+      $('#23').hasClass('green-chip') && $('#17').hasClass('green-chip') && $('#11').hasClass('green-chip') && $('#5').hasClass('green-chip') ||
+      $('#36').hasClass('green-chip') && $('#30').hasClass('green-chip') && $('#24').hasClass('green-chip') && $('#18').hasClass('green-chip') ||
+      $('#30').hasClass('green-chip') && $('#24').hasClass('green-chip') && $('#18').hasClass('green-chip') && $('#12').hasClass('green-chip') ||
+      $('#24').hasClass('green-chip') && $('#18').hasClass('green-chip') && $('#12').hasClass('green-chip') && $('#6').hasClass('green-chip') ||
+      $('#37').hasClass('green-chip') && $('#31').hasClass('green-chip') && $('#25').hasClass('green-chip') && $('#19').hasClass('green-chip') ||
+      $('#31').hasClass('green-chip') && $('#25').hasClass('green-chip') && $('#19').hasClass('green-chip') && $('#13').hasClass('green-chip') ||
+      $('#38').hasClass('green-chip') && $('#32').hasClass('green-chip') && $('#26').hasClass('green-chip') && $('#20').hasClass('green-chip') ||
       // Diagonal L
-      $('#38').hasClass('pink-chip') && $('#30').hasClass('pink-chip') && $('#22').hasClass('pink-chip') && $('#14').hasClass('pink-chip') ||
-      $('#39').hasClass('pink-chip') && $('#31').hasClass('pink-chip') && $('#23').hasClass('pink-chip') && $('#15').hasClass('pink-chip') ||
-      $('#31').hasClass('pink-chip') && $('#23').hasClass('pink-chip') && $('#15').hasClass('pink-chip') && $('#7').hasClass('pink-chip') ||
-      $('#40').hasClass('pink-chip') && $('#32').hasClass('pink-chip') && $('#24').hasClass('pink-chip') && $('#16').hasClass('pink-chip') ||
-      $('#32').hasClass('pink-chip') && $('#24').hasClass('pink-chip') && $('#16').hasClass('pink-chip') && $('#8').hasClass('pink-chip') ||
-      $('#24').hasClass('pink-chip') && $('#16').hasClass('pink-chip') && $('#8').hasClass('pink-chip') && $('#0').hasClass('pink-chip') ||
-      $('#41').hasClass('pink-chip') && $('#33').hasClass('pink-chip') && $('#25').hasClass('pink-chip') && $('#17').hasClass('pink-chip') ||
-      $('#33').hasClass('pink-chip') && $('#25').hasClass('pink-chip') && $('#17').hasClass('pink-chip') && $('#9').hasClass('pink-chip') ||
-      $('#25').hasClass('pink-chip') && $('#17').hasClass('pink-chip') && $('#9').hasClass('pink-chip') && $('#1').hasClass('pink-chip') ||
-      $('#34').hasClass('pink-chip') && $('#26').hasClass('pink-chip') && $('#18').hasClass('pink-chip') && $('#10').hasClass('pink-chip') ||
-      $('#26').hasClass('pink-chip') && $('#18').hasClass('pink-chip') && $('#10').hasClass('pink-chip') && $('#2').hasClass('pink-chip') ||
-      $('#27').hasClass('pink-chip') && $('#19').hasClass('pink-chip') && $('#11').hasClass('pink-chip') && $('#3').hasClass('pink-chip')) {
+      $('#38').hasClass('green-chip') && $('#30').hasClass('green-chip') && $('#22').hasClass('green-chip') && $('#14').hasClass('green-chip') ||
+      $('#39').hasClass('green-chip') && $('#31').hasClass('green-chip') && $('#23').hasClass('green-chip') && $('#15').hasClass('green-chip') ||
+      $('#31').hasClass('green-chip') && $('#23').hasClass('green-chip') && $('#15').hasClass('green-chip') && $('#7').hasClass('green-chip') ||
+      $('#40').hasClass('green-chip') && $('#32').hasClass('green-chip') && $('#24').hasClass('green-chip') && $('#16').hasClass('green-chip') ||
+      $('#32').hasClass('green-chip') && $('#24').hasClass('green-chip') && $('#16').hasClass('green-chip') && $('#8').hasClass('green-chip') ||
+      $('#24').hasClass('green-chip') && $('#16').hasClass('green-chip') && $('#8').hasClass('green-chip') && $('#0').hasClass('green-chip') ||
+      $('#41').hasClass('green-chip') && $('#33').hasClass('green-chip') && $('#25').hasClass('green-chip') && $('#17').hasClass('green-chip') ||
+      $('#33').hasClass('green-chip') && $('#25').hasClass('green-chip') && $('#17').hasClass('green-chip') && $('#9').hasClass('green-chip') ||
+      $('#25').hasClass('green-chip') && $('#17').hasClass('green-chip') && $('#9').hasClass('green-chip') && $('#1').hasClass('green-chip') ||
+      $('#34').hasClass('green-chip') && $('#26').hasClass('green-chip') && $('#18').hasClass('green-chip') && $('#10').hasClass('green-chip') ||
+      $('#26').hasClass('green-chip') && $('#18').hasClass('green-chip') && $('#10').hasClass('green-chip') && $('#2').hasClass('green-chip') ||
+      $('#27').hasClass('green-chip') && $('#19').hasClass('green-chip') && $('#11').hasClass('green-chip') && $('#3').hasClass('green-chip')) {
         $nextTurn.text("Player Two Wins!!");
-        $nextTurn.css('color', 'white');
-        $nextTurn.addClass('pink-wins');
+        $nextTurn.css('color','#4CC417');
+        $nextTurn.addClass('green-wins');
   } else {
     console.log('There is a shorter way to do this');
   }
