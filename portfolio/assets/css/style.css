@@ -1,0 +1,322 @@
+
+body {
+    font-family: 'Niramit', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #292A2A;
+    line-height: 30px;
+    text-align: center;
+    background-color: black;
+}
+
+.top-header-title {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.social-link-img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.lang-text {
+  color: black;
+  font-weight: bold;
+}
+
+.resume-img {
+  align-content: center;
+  border-radius: 5px;
+}
+
+strong {
+ font-weight: 600;
+}
+
+a, a:hover, a:focus {
+  color: #B7245C;
+  text-decoration: none; transition: all .3s;
+}
+
+h1, h2 {
+	margin-top: 20px;
+	font-family: 'Sacramento', cursive;
+	font-size: 55px;
+  font-weight: 300;
+  color: black;
+  line-height: 30px;
+}
+
+img {
+  max-width: 100%;
+ }
+
+.medium-paragraph {
+	font-size: 17px;
+	line-height: 25px;
+}
+
+.colored-text {
+  color: #B7245C;
+ }
+
+::-moz-selection { background: #B7245C; color: #fff; text-shadow: none; }
+::selection { background: #B7245C; color: #fff; text-shadow: none; }
+
+
+/***** General style, all sections *****/
+
+.section-container {
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+.section-container-gray-bg {
+	background: #f8f8f8
+}
+
+.section-container-image-bg,
+.section-container-image-bg h2,
+.section-container-image-bg h3 {
+	color: #fff;
+}
+
+.section-container-image-bg .divider-1 span {
+	border-color: #fff;
+}
+
+.section-description {
+	margin-top: 60px;
+    padding-bottom: 10px;
+}
+
+.section-description p {
+    margin-top: 20px;
+	padding: 0 120px;
+}
+.section-container-image-bg .section-description p {
+	opacity: 0.8;
+}
+
+.section-bottom-button {
+	padding-top: 60px;
+}
+
+/***** Divider *****/
+
+.divider-1 span {
+	display: inline-block;
+	width: 200px;
+	border-bottom: 1px solid #B7245C;
+}
+
+
+/***** Top menu *****/
+
+.navbar {
+	background: #B7245C;
+	-o-transition: all .6s; -moz-transition: all .6s; -webkit-transition: all .6s; -ms-transition: all .6s; transition: all .6s;
+	backface-visibility: hidden;
+}
+.navbar.navbar-no-bg { background: #444; background: rgba(0, 0, 0, 0.2); }
+
+.navbar-dark .navbar-nav { font-size: 15px; color: #fff; font-weight: 600; }
+.navbar-dark .navbar-nav .nav-link { color: #B7245C; color: rgba(255, 255, 255, 0.8); border: 0; }
+.navbar-dark .navbar-nav .nav-link:hover { color: #FB5CBA; }
+.navbar-dark .navbar-nav .nav-link:focus { color: #fff; outline: 0; }
+
+.navbar-expand-md .navbar-nav .nav-link { padding-left: 1rem; padding-right: 1rem; }
+
+
+/***** Top-Navigation *****/
+
+.top-content {
+    padding: 210px 0;
+}
+
+.top-content .text {
+	color: #fff;
+}
+
+.top-content .text h1 {
+	margin-top: 25px;
+	color: #fff;
+}
+
+.top-content .description {
+	margin: 30px 0 10px 0;
+}
+
+.top-content .description p {
+  opacity: 0.8;
+}
+
+.top-content .top-big-link {
+	margin-top: 45px;
+}
+
+
+/***** ABOUT ME SECTION *****/
+
+.about-me-box {
+	margin-top: 100px;
+}
+
+.about-me-box-text {
+	padding-right: 30px;
+	text-align: left;
+}
+
+.about-me-box-text h3 {
+	margin-top: 0;
+}
+
+.about-me-box-text .medium-paragraph {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.about-me-box-text a { border-bottom: 1px solid #B7245C; }
+.about-me-box-text a:hover, .about-me-box-text a:focus { border: 0; }
+
+.about-me-box-img img {
+	border-radius: 4px;
+}
+
+/* SKILLS */
+
+.skills-content img {
+  max-width: 70px;
+  max-height: 70px;
+}
+
+.skills-content .text h1 {
+	margin-top: 50px;
+	color: #fff;
+}
+
+.skills-content {
+	margin-top: -150px;
+  padding: 210px 0;
+
+}
+/***** Portfolio *****/
+
+.portfolio-box {
+	padding-top: 30px;
+	text-align: left;
+}
+
+.portfolio-box-image {
+	overflow: hidden;
+	border-radius: 4px;
+  max-width: 60%;
+  max-height: 60%;
+  border: solid 1px #B7245C;
+}
+
+.portfolio-box-image img {
+	-o-transition: all .8s; -moz-transition: all .8s; -webkit-transition: all .8s; -ms-transition: all .8s; transition: all .8s;
+}
+
+.portfolio-box-image:hover img {
+	-o-transform: scale(1.25); -moz-transform: scale(1.25); -webkit-transform: scale(1.25); -ms-transform: scale(1.25); transform: scale(1.25);
+}
+
+.portfolio-box h3 {
+	margin-top: 30px;
+}
+.portfolio-box h3 a { color: #555; }
+.portfolio-box h3 a:hover, .portfolio-box h3 a:focus {
+  color: #B7245C;
+}
+
+.portfolio-box h3 i {
+	padding-left: 10px;
+	color: #ccc;
+	-o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+.portfolio-box h3:hover i { padding-left: 15px; }
+
+.portfolio-box-date {
+	padding-bottom: 10px;
+	font-size: 14px;
+	color: #aaa;
+	text-transform: uppercase;
+}
+
+.portfolio-box-date i {
+	padding-right: 5px;
+	color: #ddd;
+}
+
+.portfolio-container .section-bottom-button {
+	padding-top: 40px;
+}
+
+/* RESUME */
+
+.resume-text {
+  color: #fff;
+}
+
+.resume-box-image {
+	overflow: hidden;
+	border-radius: 7px;
+  max-width: 50%;
+  max-height: 50%;
+  margin: 0 auto;
+}
+
+.resume-box-image img {
+	-o-transition: all .8s; -moz-transition: all .8s; -webkit-transition: all .8s; -ms-transition: all .8s; transition: all .8s;
+}
+
+.resume-box-image:hover img {
+	-o-transform: scale(1.25); -moz-transform: scale(1.25); -webkit-transform: scale(1.25); -ms-transform: scale(1.25); transform: scale(1.25);
+}
+
+/***** Footer *****/
+
+footer {
+	padding: 20px 0 0 0;
+	background: #B7245C;
+	color: #fff;
+	text-align: left;
+}
+
+.footer-left a { color: #ddd; border-bottom: 1px solid #ddd; }
+.footer-left a:hover, .footer-left a:focus { color: #ddd; border: 0; }
+
+.footer-right {
+	text-align: right;
+}
+
+.footer-right a {
+	margin: 0 6px;
+    font-size: 32px;
+    color: #aaa;
+}
+.footer-right a:hover, .footer-right a:focus { color: #FB5CBA; }
+
+.footer-bottom {
+	padding-bottom: 25px;
+	text-align: center;
+}
+
+.footer-bottom a {
+	font-size: 32px;
+    color: #fff;
+    line-height: 40px;
+}
+
+.footer-bottom a:hover, .footer-bottom a:focus { color: #FB5CBA; }
+
+/* FONTS */
+font-family: 'Cinzel', serif;
+font-family: 'Sacramento', cursive;
+font-family: 'Cutive Mono', monospace;
+font-family: 'Elsie', cursive;
+font-family: 'Roboto', sans-serif;

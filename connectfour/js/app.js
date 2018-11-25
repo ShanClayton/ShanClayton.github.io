@@ -7,33 +7,33 @@ $(() => {
 // SELECTING ELEMENTS
   const $board = $('#gameboard'); // grabbing the board id
 
-  const $restartGame = $('#restart'); // grabbing the clear-board id
+  const $restartGame = $('#restart'); // grabbing the restart id
 
   const $nextTurn = $('p'); // grabbing p tag from html
 
   const $circleClass = $('.circle'); // grabbing the circle class
 
-  let toggle = true; // var set to true
+  let toggle = true; // variable set to true
 
-// Switching Turns (3)
+// Switching Turns (3) - when player one puts chip into slot, game switches to player two
   const chipFunction = function(column) {
     console.log('testing chipFunction'); // click listener is working
 
     if (toggle) {
-      $(column).addClass('yellow-chip'); // if toggle is true, it will add the class of light-blue chip to the $gameBoardDiv created below
+      $(column).addClass('yellow-chip'); // if toggle is true, it will add the class of yellow to the $gameBoardDiv created below
 
-      $nextTurn.text("Player One"); // when light-blue chip is added to the div, the p tag will change to player 2 (pink) turn
-      $nextTurn.css('color', '#F3F315'); // changing the color of the p tag to pink
+      $nextTurn.text("Player One"); // when yellow chip is added to the div, the p tag will change to player 2 (green) turn
+      $nextTurn.css('color', '#F3F315'); // changing the color of the p tag to yellow
     } else {
       $(column).addClass('green-chip'); // if toggle is false, it will add the class of the green-chip to the $gameBoardDiv
 
-      $nextTurn.text("Player Two"); // when green-chip is added to the div, the p tag will change to player 1 (light blue) turn
-      $nextTurn.css('color', '#39ff14'); // changing the color of the p tag to light blue
+      $nextTurn.text("Player Two"); // when green-chip is added to the div, the p tag will change to player 1 (yellow) turn
+      $nextTurn.css('color', '#39ff14'); // changing the color of the p tag to green
     };
 
-      toggle = !toggle; // alternates the turns between light blue and pink
+      toggle = !toggle; // alternates  turns between yellow and green
 
-      checkWins(); // calls the checkingWins function to see who has won
+      checkWins(); // calls the checkWins function to see who has won
 
   };// --> closing chipFunction function
 
@@ -41,7 +41,7 @@ $(() => {
 
 //  Creating the gameboard (1)
   const createBoard = function() {
-    for (let i = 0; i < 42; i++) { // create 42 white circles that when clicked will change to blue to pink
+    for (let i = 0; i < 42; i++) { // create 42 white circles that when clicked will change to yellow to green
       const $gameBoardDiv = $('<div>'); // creating a new div that goes below the div board
         $gameBoardDiv.addClass('circle'); // adding the class circle to the new board div
         $gameBoardDiv.attr('id', i); // adding ids with numbers to the circles
@@ -64,7 +64,7 @@ $(() => {
   const column7 = [$('#41'), $('#34'), $('#27'), $('#20'), $('#13'), $('#6')];
 
 
-// grabbing the drop  buttons from html
+// grabbing the X buttons from html
   const $button1Id = $('#button1');
   const $button2Id = $('#button2');
   const $button3Id = $('#button3');
@@ -74,14 +74,14 @@ $(() => {
   const $button7Id = $('#button7');
 
 
-// create a function to make the top Drop buttons clickable (4)
+// create a function to make the top  buttons clickable (4)
   const clickBtns = function () {
 
     $button1Id.on('click', function(){ // when button is clicked, the for loop will run
       for (let i = 0; i < column1.length; i++) {
-        if ($(column1[i]).hasClass('yellow-chip') || column1[i].hasClass('green-chip')) { // if it has a light blue or pink button do nothing
-        } else { // else, run the chipFunction which will switch from light-blue to pink token
-          chipFunction(column1[i]); // this makes the chip start with player one (light-blue) because toggle is set to true
+        if ($(column1[i]).hasClass('yellow-chip') || column1[i].hasClass('green-chip')) { // if it has a yellow or green button do nothing
+        } else { // else, run the chipFunction which will switch from yellow to green chip
+          chipFunction(column1[i]); // this makes the chip start with player one (yellow) because toggle is set to true
           break; // this will stop the column from being filled out completely
         }
       }
@@ -151,7 +151,7 @@ $(() => {
 
   clickBtns(); // calling the clickButtons function so the user can click the x  buttons on top of the page
 
-//CHECK WINS amd commiting DRY :( (5)
+//CHECK WINS and commiting DRY :( (5)
   const checkWins = function() {
   // horizontal row a
       if ($('#35').hasClass('yellow-chip') && $('#36').hasClass('yellow-chip') && $('#37').hasClass('yellow-chip') && $('#38').hasClass('yellow-chip') ||
@@ -333,7 +333,7 @@ $(() => {
     console.log('There is a shorter way to do this');
   }
 
-}; // --> end $checkingWins function
+}; // --> end $checkWins function
   checkWins();
 
 //Reset button
@@ -367,8 +367,8 @@ $(() => {
 create a board using html and css (divs)  - done
 create rows of 6 down and 7 across total of 42 circles - done
 circle should fill with color when players click desired spot - done
-each player should have different color (player 1 - pink player 2 - blue ) - done
-check for winner when player makes a row of same color
-pop up a winner message when winner is found
+each player should have different color (player 1 - yellow player 2 - green ) - done
+check for winner when player makes a row of same color - done
+pop up a winner message when winner is found - done
 add buttons that will drop color into chosen slots - done
-add reset game button*/
+add reset game button - done */
