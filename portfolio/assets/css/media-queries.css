@@ -1,4 +1,4 @@
-
+/*
 @media (min-width: 992px) and (max-width: 1199px) {
 
 	.about-us-box-text { padding-right: 0; }
@@ -26,7 +26,7 @@
 
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
 
 	.navbar.navbar-no-bg { background: #444; }
 	.navbar-dark .navbar-toggler { border-color: #444; }
@@ -56,7 +56,7 @@
 
 	h1, h2 { font-size: 32px; }
 
-}
+} */
 
 
 /* Mobile Friendly */
@@ -70,4 +70,4 @@ only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
 
-}
+} */
