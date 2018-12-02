@@ -36,7 +36,7 @@ strong {
 }
 
 a, a:hover, a:focus {
-  color: #028090;
+  color: #00A6A6;
   text-decoration: none; transition: all .3s;
 }
 
@@ -59,12 +59,34 @@ img {
 }
 
 .colored-text {
-  color: #B7245C;
+  color: #fff;
  }
 
+/** BUTTONS **/
+.buttons {
+	display: inline-block;
+	height: 50px;
+	margin: 0 5px;
+  margin-top: 3px;
+	padding: 0 28px;
+	background: #fff;
+	border: 1px solid #153D4E;
+	font-size: 15px;
+  font-weight: 600;
+  line-height: 48px;
+  color: #fff;
+  border-radius: 2px;
+  transition: all .3s;
+}
+.buttons:hover, .buttons:focus, .buttons:active, .buttons:active:focus,
+.buttons.btn-primary:not(:disabled):not(.disabled):active,
+.buttons.btn-primary:not(:disabled):not(.disabled):active:focus {
+	background: #028090;
+	outline: 0;
+	color: #fff;
+}
 
-
-/***** General style, all sections *****/
+/***** GENERAL AND ALL SECTIONS *****/
 
 .section-container {
     margin: 0 auto;
@@ -115,17 +137,17 @@ img {
 
 .navbar {
 	background: #3C6B7C;
-	/* -o-transition: all .6s; -moz-transition: all .6s; -webkit-transition: all .6s; -ms-transition: all .6s; transition: all .6s;
-	backface-visibility: hidden; */
+	-o-transition: all .6s; -moz-transition: all .6s; -webkit-transition: all .6s; -ms-transition: all .6s; transition: all .6s;
+	backface-visibility: hidden;
 }
 .navbar.navbar-no-bg { background: #eee; background: rgba(0, 0, 0, 0.2); }
 
 .navbar-dark .navbar-nav { font-size: 15px; color: #fff; font-weight: 600; }
 .navbar-dark .navbar-nav .nav-link { color: #3C6B7C; color: rgba(255, 255, 255, 0.8); border: 0; }
-.navbar-dark .navbar-nav .nav-link:hover { color: #028090; }
+.navbar-dark .navbar-nav .nav-link:hover { color: #00A6A6; }
 .navbar-dark .navbar-nav .nav-link:focus { color: #fff; outline: 0; }
 
-.navbar-expand-md .navbar-nav .nav-link { padding-left: 5rem; padding-right: 5rem; }
+.navbar-expand-md .navbar-nav .nav-link { padding-left: 1rem; padding-right: 1rem; }
 
 
 /***** Top-Navigation *****/
@@ -176,7 +198,7 @@ img {
 	margin-bottom: 20px;
 }
 
-.about-me-box-text a { border-bottom: 1px solid #B7245C; }
+.about-me-box-text a { border-bottom: 1px solid #028090; }
 .about-me-box-text a:hover, .about-me-box-text a:focus { border: 0; }
 
 .about-me-box-img img {
@@ -193,6 +215,10 @@ img {
 .skills-content .text h1 {
 	margin-top: 50px;
 	color: #fff;
+}
+
+.skills-text {
+  color: #fff;
 }
 
 .skills-content {
@@ -215,6 +241,13 @@ img {
   border: solid 1px #3C6B7C;
 }
 
+.portfolio-box-image img {
+	-o-transition: all .8s; -moz-transition: all .8s; -webkit-transition: all .8s; -ms-transition: all .8s; transition: all .8s;
+}
+
+.portfolio-box-image:hover img {
+	-o-transform: scale(1.25); -moz-transform: scale(1.25); -webkit-transform: scale(1.25); -ms-transform: scale(1.25); transform: scale(1.25);
+}
 
 .portfolio-container .section-bottom-button {
 	padding-top: 40px;
@@ -228,24 +261,30 @@ img {
 
 .resume-box-image {
 	overflow: hidden;
-	border-radius: 7px;
-  max-width: 50%;
-  max-height: 50%;
+	border-radius: 4px;
+  max-width: 80%;
+  max-height: 80%;
   margin: 0 auto;
 }
 
+/* .resume-box-image img {
+	-o-transition: all .8s; -moz-transition: all .8s; -webkit-transition: all .8s; -ms-transition: all .8s; transition: all .8s;
+}
 
+.resume-box-image:hover img {
+	-o-transform: scale(1.25); -moz-transform: scale(1.25); -webkit-transform: scale(1.25); -ms-transform: scale(1.25); transform: scale(1.25);
+} */
 
 /***** Footer *****/
 
 footer {
 	padding: 20px 0 0 0;
-	background: #;
+	background: #3C6B7C;
 	color: #fff;
 	text-align: left;
 }
 
-/* .footer-left a { color: #ddd; border-bottom: 1px solid #ddd; }
+.footer-left a { color: #ddd; border-bottom: 1px solid #ddd; }
 .footer-left a:hover, .footer-left a:focus { color: #ddd; border: 0; }
 
 .footer-right {
@@ -257,7 +296,7 @@ footer {
     font-size: 32px;
     color: #aaa;
 }
-.footer-right a:hover, .footer-right a:focus { color: #FB5CBA; }
+.footer-right a:hover, .footer-right a:focus { color: #028090; }
 
 .footer-bottom {
 	padding-bottom: 25px;
@@ -270,7 +309,7 @@ footer {
     line-height: 40px;
 }
 
-.footer-bottom a:hover, .footer-bottom a:focus { color: #FB5CBA; } */
+.footer-bottom a:hover, .footer-bottom a:focus { color: #028090; }
 
 
 /* FONTS */
