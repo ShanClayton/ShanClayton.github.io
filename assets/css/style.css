@@ -13,8 +13,6 @@
   --light-teal:#00A6A6;
 }
 
-
-
 body {
     font-family: 'Niramit', sans-serif;
     font-size: 16px;
@@ -254,7 +252,7 @@ img {
 	border-radius: 4px;
   max-width: 75%;
   max-height: 75%;
-  border: solid 1px #3C6B7C;
+  /* border: solid 1px #3C6B7C; */
 }
 
 .portfolio-box-image img {
@@ -268,6 +266,11 @@ img {
 .portfolio-container .section-bottom-button {
 	padding-top: 40px;
 }
+
+#in-progress {
+  color:#8D6277;
+}
+
 
 /* RESUME */
 
