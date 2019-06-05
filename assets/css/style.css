@@ -208,8 +208,8 @@ img {
 }
 
 .about-me-box-text .medium-paragraph {
-	margin-top: 20px;
-	margin-bottom: 20px;
+  margin-top: -170px;
+  padding: 210px 0;
 }
 
 .about-me-box-text a { border-bottom: 1px solid #028090; }
@@ -330,11 +330,3 @@ footer {
 }
 
 .footer-bottom a:hover, .footer-bottom a:focus { color: #028090; }
-
-/* FONTS */
-font-family: 'Cinzel', serif;
-font-family: 'Sacramento', cursive;
-font-family: 'Cutive Mono', monospace;
-font-family: 'Elsie', cursive;
-font-family: 'Roboto', sans-serif;
-font-family: 'Niramit', sans-serif;
