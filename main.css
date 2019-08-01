@@ -213,7 +213,7 @@ li{
   font-size: 18rem;
   font-weight: normal;
   font-style: normal;
-  font-family: "TheHistoriaDemo", sans-serif;
+  font-family: "TheHistoriaDemo",'Rock Salt', cursive;
   background: linear-gradient(to right, #ffe838, #adff2f, #fd57bf, #a480cf);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -261,17 +261,6 @@ li{
 .about-details{
   flex: 1;
 }
-
-/*
- .social-media{
-  margin-top: 50rem;
-  max-width: 50px;
-}
-
- .social-media i{
-  font-size: 5rem;
-  transition: color 650ms;
-} */
 
 .social-link-img {
   max-width: 40px;
