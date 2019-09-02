@@ -142,7 +142,7 @@ li{
 
 .nav-link:hover,
 .nav-link:focus{
-  background: linear-gradient(to top, #a480cf, #fd57bf, #adff2f);
+  background: linear-gradient(to left, #9B5DE5, #00BBF9, #F15BB5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -170,7 +170,7 @@ li{
 }
 
 .bar{
-  background: linear-gradient(to right, #fd57bf, #adff2f);
+  background: linear-gradient(to right, #F15BB5, #00F5D4);
   widht: 100%;
   height: 4px;
   border-radius: .8rem;
@@ -214,7 +214,7 @@ li{
   font-weight: normal;
   font-style: normal;
   font-family: "TheHistoriaDemo",'Rock Salt', cursive;
-  background: linear-gradient(to right, #ffe838, #adff2f, #fd57bf, #a480cf);
+  background: linear-gradient(to right,  #00F5D4, #00BBF9, #F15BB5, #9B5DE5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   padding: 1rem;
@@ -296,8 +296,8 @@ li{
 .icon-container{
   width: 10rem;
   height: 10rem;
-  border: 3px solid #fd57bf;
-  background-color: #adff2f;
+  border: 3px solid #F15BB5;
+  background-color: #00F5D4;
   margin-bottom: 2rem;
   display: flex;
   transform: rotate(-45deg);
@@ -360,7 +360,7 @@ li{
 
 /*Start timeline*/
 .timeline ul{
-  border-left: 4px solid #ffe838;
+  border-left: 4px solid #9b5de5;
   border-radius: .8rem;
   background-color: rgba(0,0,0,0.05);
   margin: 0 auto;
@@ -411,7 +411,7 @@ li{
 .timeline .date::after{
   content: '';
    position: absolute;
-   box-shadow: 0 0 0 4px #fd57b7;
+   box-shadow: 0 0 0 4px #00bbf9;
    width: 1.2rem;
    height: 1.2rem;
    left: -8rem;;
@@ -426,7 +426,7 @@ li{
 }
 
 .arrow-green{
-  color: #adff2f;
+  color: #9B5DE5;
 }
 /*End timeline*/
 
@@ -451,12 +451,12 @@ textarea{
   padding: 1rem;
   margin-bottom: 5px;
   border: none;
-  outline-color: #adff2f;
+  outline-color: #00F5D4;
 }
 
 input[type="submit"]{
   width: initial;
-  background-color: #fd57bf;
+  background-color: #00f5d4;
   color: #eee;
   padding: 1rem 2rem;
   border-radius: .8rem;
@@ -465,8 +465,8 @@ input[type="submit"]{
 }
 
 input[type="submit"]:hover{
-  color: #adff2f;
-  background-color: #fd57bf;
+  color: #9B5DE5;
+  background-color: #F15BB5 ;
 }
 /*End contact*/
 
@@ -506,7 +506,7 @@ input[type="submit"]:hover{
 /*Start animations*/
 @keyframes pulse {
   0%{
-    box-shadow: 0 0 0 0 rgba(253, 87, 191, 0.99);
+    box-shadow: 0 0 0 0 rgba(165, 55, 253, 1);
   }
   70%{  box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0);
   }
