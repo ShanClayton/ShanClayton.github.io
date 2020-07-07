@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -32,12 +33,129 @@ a {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
   text-align: center;
+  letter-spacing: 1rem;
+  animation: text-flicker 3s linear infinite;
+  -webkit-animation: text-flicker 3s linear infinite;
 }
 
 .bottom-left-text {
   position: absolute;
   bottom: 0;
   left: 1.7rem;
+  letter-spacing: 2px;
+  font-size: 10px;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+    text-shadow: 0px 0px 2.9rem rgba(216, 191, 216);
+  }
+
+  2% {
+    opacity: 1;
+    text-shadow: 0px 0px 2.9rem rgba(216, 191, 216);
+  }
+
+  8% {
+    opacity: 0.1;
+    text-shadow: 0px 0px 2.9rem rgba(216, 191, 216);
+  }
+
+  9% {
+    opacity: 1;
+    text-shadow: 0px 0px 2.9rem rgba(216, 191, 216);
+  }
+
+  12% {
+    opacity: 0.1;
+    text-shadow: 0px 0px 2.9rem rgba(216, 191, 216);
+  }
+
+  20% {
+    opacity: 1;
+    text-shadow: 0px 0px 2.9rem rgba(216, 191, 216);
+  }
+
+  25% {
+    opacity: 0.3;
+    text-shadow: 0px 0px 2.9rem rgba(221, 160, 221);
+  }
+
+  30% {
+    opacity: 1;
+    text-shadow: 0px 0px 2.9rem rgba(221, 160, 221);
+  }
+
+  70% {
+    opacity: 0.7;
+    text-shadow: 0px 0px 2.9rem rgba(221, 160, 221);
+  }
+
+  72% {
+    opacity: 0.2;
+    text-shadow: 0px 0px 2.9rem rgba(221, 160, 221);
+  }
+
+  77% {
+    opacity: .9;
+    text-shadow: 0px 0px 2.9rem rgba(221, 160, 221);
+  }
+
+  100% {
+    opacity: .9;
+    text-shadow: 0px 0px 2.9rem rgba(221, 160, 221);
+  }
+}
+
+/* media queries */
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .bottom-left-text {
+    position: absolute;
+    bottom: 0;
+    left: 1.7rem;
+    font-size: 1rem;
+  }
+}
+
+@media all and (min-width: 320px) and (max-width: 470px) {
+
+  h1 {
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+}
+
+.bottom-left-text {
+  position: absolute;
+  bottom: 0;
+  left: 1.7rem;
+  font-size: 1rem;
+}
 }
