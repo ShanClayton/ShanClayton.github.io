@@ -15,12 +15,29 @@ html {
   background-color: #000000;
 }
 
+a {
+  text-decoration: none;
+  color: #eee;
+}
+
+
 .bkgrd-image {
-  background: url(./images/dgrbwimageresize.png);
+  background: url(./images/dgrbwimageresize.png) no-repeat;
   height: 100%;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+
+
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   text-align: center;
+}
+
+.bottom-left-text {
+  position: absolute;
+  bottom: 0;
+  left: 1.7rem;
 }
