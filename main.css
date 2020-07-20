@@ -39,13 +39,16 @@ a {
   color: #eee;
 }
 
-p {
-  font-size: 1.8rem;
-  font-weight: 300;
-}
-
 img {
   width: 100%;
+}
+
+ul,
+p {
+  list-style: none;
+  font-size: 1.8rem;
+  font-weight: 300;
+
 }
 
 /*End global*/
@@ -277,13 +280,18 @@ li {
 
 /*End about*/
 
-/*Start services*/
+/*Start skills*/
 .my-skills {
   margin-top: 10rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: .5rem;
   text-align: center;
+}
+
+.skills {
+  color: #F15BB5;
+  font-weight: 300;
 }
 
 .skill {
@@ -304,14 +312,14 @@ li {
   width: 10rem;
   height: 10rem;
   border: 3px solid #F15BB5;
-  background-color: #00F5D4;
+  background-color: #0A5081;
   margin-bottom: 2rem;
   display: flex;
   transform: rotate(-45deg);
 }
 
 .icon-container i {
-  color: #ea4c89;
+  color: #F8E69E;
   font-size: 5rem;
   margin: auto;
   transform: rotate(45deg);
