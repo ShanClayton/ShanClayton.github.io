@@ -294,6 +294,14 @@ li {
   font-weight: 300;
 }
 
+.skills_title {
+  font
+}
+
+.skills_subtitle {
+  font-size: 1.5rem;
+}
+
 .skill {
   display: flex;
   flex-direction: column;
@@ -309,8 +317,8 @@ li {
 }
 
 .icon-container {
-  width: 10rem;
-  height: 10rem;
+  width: 8rem;
+  height: 8rem;
   border: 3px solid #F15BB5;
   background-color: #0A5081;
   margin-bottom: 2rem;
@@ -320,7 +328,7 @@ li {
 
 .icon-container i {
   color: #39ff14;
-  font-size: 5rem;
+  font-size: 3.5rem;
   margin: auto;
   transform: rotate(45deg);
 }
