@@ -351,6 +351,11 @@ li {
   flex: 1;
 }
 
+.portfolio--image {
+  width: 40rem;
+  height: 50rem;
+}
+
 .portfolio-description {
   flex: 1;
 }
